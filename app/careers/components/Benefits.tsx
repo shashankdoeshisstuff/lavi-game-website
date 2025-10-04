@@ -80,7 +80,7 @@ export default function Benefits() {
             Perks & <span className="text-primary">Benefits</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            We invest in our team's well-being and growth because we believe happy developers create amazing games.
+            {`We invest in our team's well-being and growth because we believe happy developers create amazing games.`}
           </p>
         </motion.div>
 

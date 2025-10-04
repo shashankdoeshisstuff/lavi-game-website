@@ -47,7 +47,7 @@ export default function ContactInfo() {
             Why Choose <span className="text-primary">Us</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            We're committed to providing exceptional service and building lasting partnerships.
+            {`We're committed to providing exceptional service and building lasting partnerships.`}
           </p>
         </motion.div>
 

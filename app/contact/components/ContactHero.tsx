@@ -41,8 +41,8 @@ export default function ContactHero() {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="text-xl text-muted-foreground mb-10"
           >
-            Ready to start your next project? Let's discuss how we can bring your vision to life 
-            with cutting-edge technology and innovative solutions.
+            {`Ready to start your next project? Let's discuss how we can bring your vision to life 
+            with cutting-edge technology and innovative solutions.`}
           </motion.p>
 
           {/* Quick Contact Info */}

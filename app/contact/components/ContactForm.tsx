@@ -54,7 +54,7 @@ export default function ContactForm() {
                   Send us a <span className="text-primary">Message</span>
                 </h2>
                 <p className="text-muted-foreground">
-                  Fill out the form below and we'll get back to you within 24 hours.
+                  {`Fill out the form below and we'll get back to you within 24 hours.`}
                 </p>
               </div>
 

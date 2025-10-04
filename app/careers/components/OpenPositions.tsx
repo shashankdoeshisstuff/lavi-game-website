@@ -145,10 +145,10 @@ export default function OpenPositions() {
           className="text-center mt-12"
         >
           <div className="bg-gradient-to-r from-primary/10 to-primary/5 dark:from-primary/20 dark:to-primary/10 rounded-2xl p-8 border border-border/50">
-            <h3 className="text-2xl font-bold mb-4">Don't See the Perfect Role?</h3>
+            <h3 className="text-2xl font-bold mb-4">{`Don't See the Perfect Role?`}</h3>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              We're always looking for talented people to join our team. Even if you don't see an exact match, 
-              we'd love to hear from you and discuss how you can contribute to our mission.
+              {`We're always looking for talented people to join our team. Even if you don't see an exact match, 
+              we'd love to hear from you and discuss how you can contribute to our mission.`}
             </p>
             <Button variant="outline" size="lg" className="rounded-full px-8">
               Send Open Application
