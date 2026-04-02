@@ -1,36 +1,53 @@
 // components/sections/home/hero.tsx
 import { Button } from '@/components/ui/button'
-import { getHomePageContent } from '@/lib/getHomePageContent'
-import HeroClient from './hero-client';
+import { ArrowUpRight } from 'lucide-react'
+import Link from 'next/link'
+import Clients from './clients-section'
+import BackgroundVideos from './background-videos'
 
-export default async function Hero() {
-  const { hero } = await getHomePageContent();
+const videoUrls = [
+  'https://youtu.be/j2lZM8Vip54',
+  // 'https://youtu.be/FCMEyqjZg08',
+  // 'https://youtu.be/5_pzIzQSBL4',
+]
 
-  // Fallback if no videos are available
-  if (hero.length === 0) {
-    return (
-      <section className="relative h-screen flex items-center justify-center bg-gradient-to-br from-purple-900 to-black">
-        <div className="container text-center text-white px-4">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
-            The Future of <span className="text-primary">Gaming</span>
-          </h1>
-          <p className="text-xl md:text-2xl max-w-3xl mx-auto mb-10 text-white/90">
-            Immerse yourself in worlds beyond imagination with our cutting-edge
-            game development and revolutionary storytelling.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 rounded-full px-8">
-              Explore Games
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8">
-              Learn More
-            </Button>
+export default function Hero() {
+  return (
+    <section className="relative h-screen w-full overflow-hidden">
+      {/* Background videos – client component handles rotation */}
+      <BackgroundVideos videoUrls={videoUrls} />
+
+      {/* Hero Content */}
+      <div className="relative z-20 flex h-full items-center">
+        <div className="mx-auto w-full max-w-7xl px-6 md:px-12 lg:px-20">
+          <div className="max-w-xl text-left text-white">
+            <h1 className="text-4xl font-bold uppercase leading-tight md:text-6xl lg:text-7xl">
+              Crafting the <br />
+              <span className="text-white">Next Level of Play</span>
+            </h1>
+
+            <p className="mb-8 text-md text-white/80 md:text-lg">
+              Where creativity meets technology — we turn bold ideas into
+              captivating game worlds through innovative design, art, and
+              development.
+            </p>
+
+            <Link href="#contact" passHref>
+              <Button
+                size="lg"
+                className="bg-primary uppercase hover:bg-primary/90 rounded-none"
+              >
+                Contact Us <ArrowUpRight/>
+              </Button>
+            </Link>
           </div>
         </div>
-      </section>
-    )
-  }
+      </div>
 
-  // Pass the hero videos to the client component
-  return <HeroClient heroVideos={hero} />
+      {/* Clients Section – can be server if it has no client deps */}
+      <div className="absolute bottom-0 left-0 z-20 w-full">
+        <Clients />
+      </div>
+    </section>
+  )
 }

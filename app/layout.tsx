@@ -1,11 +1,21 @@
-import { Inter } from 'next/font/google'
+import { Inter, Pattaya } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 import { fetchBrandsSSR } from '@/lib/fetchBrands'
 import BrandsProvider from '@/components/BrandsProvider'
 
-const inter = Inter({ subsets: ['latin'] })
+// Fonts
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+})
+
+const pattaya = Pattaya({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-pattaya',
+})
 
 export const metadata = {
   title: 'Axenet Games | Creating Immersive Gaming Experiences',
@@ -25,8 +35,8 @@ export default async function RootLayout({
         <BrandsProvider brands={brands} />
 
         {/* Global Background Elements */}
-        <div className="fixed inset-0 -z-20">
-          {/* Grid Pattern */}
+        {/* Grid Pattern */}
+        {/* <div className="fixed inset-0 -z-20">
           <svg className="w-full h-full text-muted-foreground opacity-20" xmlns="http://www.w3.org/2000/svg" fill="none">
             <defs>
               <pattern id="grid-pattern" width="40" height="40" patternUnits="userSpaceOnUse">
@@ -35,18 +45,17 @@ export default async function RootLayout({
             </defs>
             <rect width="100%" height="100%" fill="url(#grid-pattern)" />
           </svg>
-        </div>
+        </div> */}
 
         {/* Gradient Orbs */}
-        <div className="fixed inset-0 -z-10 overflow-hidden">
+        {/* <div className="fixed inset-0 -z-10 overflow-hidden">
           <div className="absolute top-10 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-[blob_20s_infinite]" />
           <div className="absolute bottom-10 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-[blob_25s_infinite]" />
-          {/* Additional orb for better coverage */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-blue-500/5 rounded-full blur-3xl animate-[blob_30s_infinite]" />
-        </div>
+        </div> */}
 
         {/* Particles */}
-        <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+        {/* <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
           {Array.from({ length: 20 }).map((_, i) => (
             <span
               key={i}
@@ -59,7 +68,7 @@ export default async function RootLayout({
               }}
             />
           ))}
-        </div>
+        </div> */}
 
         {/* Content */}
         <div className="relative z-0">

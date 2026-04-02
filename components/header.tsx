@@ -12,7 +12,7 @@ import {
 } from '@/components/ui/navigation-menu'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import { cn } from '@/lib/utils'
-import { Menu, X } from 'lucide-react'
+import { ArrowUpRight, Menu, X } from 'lucide-react'
 import { CompactBranding } from './branding'
 
 export default function Header() {
@@ -44,24 +44,24 @@ export default function Header() {
           : 'bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b'
       )}
     >
-      <div className="mx-auto flex h-14 max-w-screen-2xl items-center justify-between px-4 md:px-8">
+      <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-4 md:px-8">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
           <CompactBranding size="md" />
         </Link>
 
         {/* Desktop Navigation */}
-        <NavigationMenu className="hidden md:flex">
+        <NavigationMenu className="hidden md:flex uppercase">
           <NavigationMenuList>
             {navigationItems.map((item) => (
               <NavigationMenuItem key={item.name}>
                 <Link href={item.href}>
                   <NavigationMenuLink
                     className={cn(
-                      'group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors',
+                      'group inline-flex h-9 w-max items-center justify-center rounded-none px-4 py-2 text-sm font-medium transition-colors',
                       isAtTop
-                        ? 'text-white hover:bg-white/10 hover:text-white'
-                        : 'text-foreground hover:bg-accent hover:text-accent-foreground',
+                        ? 'text-white hover:bg-transparent hover:text-primary'
+                        : 'text-foreground hover:bg-transparent hover:text-primary',
                       'focus:outline-none'
                     )}
                   >
@@ -75,18 +75,8 @@ export default function Header() {
 
         {/* Desktop Actions */}
         <div className="hidden items-center gap-2 md:flex">
-          <Button
-            variant={isAtTop ? 'outline' : 'ghost'}
-            size="sm"
-            className={cn(isAtTop && 'border-white text-white hover:bg-white hover:text-black')}
-          >
-            Sign In
-          </Button>
-          <Button
-            size="sm"
-            className={cn(isAtTop ? 'bg-white text-black hover:bg-white/90' : '')}
-          >
-            Get Started
+          <Button className="bg-primary hover:bg-primary/90 rounded-none uppercase">
+            Contact Us <ArrowUpRight/>
           </Button>
         </div>
 
@@ -112,16 +102,15 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="flex py-2 text-lg font-medium rounded-md px-4 hover:bg-accent"
+                  className="flex py-2 text-lg font-medium rounded-none px-4 hover:bg-accent"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </Link>
               ))}
-              <div className="flex flex-col gap-2 pt-4 border-t">
-                <Button variant="outline" className="w-full">Sign In</Button>
-                <Button className="w-full">Get Started</Button>
-              </div>
+              <Button className="bg-primary hover:bg-primary/90 rounded-none uppercase">
+                Contact Us <ArrowUpRight/>
+              </Button>
             </nav>
           </SheetContent>
         </Sheet>
