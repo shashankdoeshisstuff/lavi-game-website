@@ -1,5 +1,3 @@
-'use client'
-
 import Image from 'next/image'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -9,37 +7,37 @@ const services = [
   {
     title: 'GAME DEVELOPMENT',
     description:
-      'Kevuru is a game design studio offering a full spectrum of services, from concept and prototyping to soft launch and post-release support. Our specialists provide game design, art, animation, and top-tier development across all platforms.',
+      'We provide end-to-end game development services, from early concept and prototyping to soft launch and ongoing support. Our team handles design, art, animation, and high-quality development across multiple platforms.',
     image: '/images/service1.png'
   },
   {
     title: 'GAME ART & DESIGN',
     description:
-      'Kevuru Games is a company looking for new ways to develop and display the most thrilling gaming worlds. We always go the extra mile to create exceptional game projects and colorful arts.',
+      'Our artists and designers craft engaging worlds and memorable visual styles. We focus on building unique environments, characters, and visual elements that bring game ideas to life.',
     image: '/images/service2.png'
   },
   {
     title: 'GAME ANIMATION',
     description:
-      'Animation is what turns art into life. We work on the way characters move, how environments react, and how motion supports the story to deliver a natural and immersive experience.',
+      'Animation brings characters and worlds into motion. We create fluid movements, responsive environments, and dynamic interactions that enhance gameplay and storytelling.',
     image: '/images/service3.png'
   },
   {
     title: 'QUALITY ASSURANCE',
     description:
-      'Testing is part of everyday work. The team plays, observes, and fixes until the game runs the way it should across devices with a smooth experience.',
+      'Our QA team carefully tests every aspect of the game to ensure smooth performance across devices. Through continuous testing and improvements, we deliver a stable and polished experience.',
     image: '/images/service4.png'
   },
   {
     title: 'AAA GAME DEVELOPMENT & ART',
     description:
-      'Our outsourcing team works on big projects where every detail matters. We help studios create full worlds, design characters, and shape the overall look and feel of a game.',
+      'We collaborate on large-scale projects where quality and detail are essential. Our outsourcing team supports studios with world building, character design, and high-end visual production.',
     image: '/images/service5.png'
   },
   {
     title: 'VR DEVELOPMENT',
     description:
-      'We build VR worlds that feel close to real. The team experiments with light, depth, and motion to create immersive player experiences.',
+      'We design immersive virtual reality experiences that feel natural and interactive. By combining lighting, depth, and motion, we create engaging VR worlds for players to explore.',
     image: '/images/service6.png'
   }
 ]
@@ -50,14 +48,14 @@ export default function ServicesSection() {
       {/* Heading */}
       <div className="grid lg:grid-cols-2 gap-8 mb-16">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight">
-          FULL-CYCLE GAME
+          END-TO-END GAME
           <br className="hidden sm:block" />
-          DEVELOPMENT STUDIO
+          DEVELOPMENT
         </h2>
 
         <p className="text-gray-400 max-w-xl">
-          From your idea to soft-launch, we support your project at any stage.
-          Our team contains professionals of all profiles who deliver top quality work.
+          From concept to soft launch, we help bring your game to life at every stage.
+          Our experienced team of specialists ensures outstanding quality in every detail.
         </p>
       </div>
 
@@ -91,31 +89,16 @@ export default function ServicesSection() {
                 {service.description}
               </p>
 
-              <Button
+              {/* <Button
                 variant="default"
                 className="mt-4 w-fit transition rounded-none"
               >
                 SEE MORE
                 <ArrowUpRight className="ml-2 h-4 w-4" />
-              </Button>
+              </Button> */}
             </CardContent>
           </Card>
         ))}
-      </div>
-
-      {/* Platforms */}
-      <div className="mt-20 text-center">
-        <h4 className="text-cyan-400 text-sm tracking-widest mb-6">
-          PLATFORMS WE WORK WITH
-        </h4>
-
-        <div className="flex justify-center items-center gap-8 opacity-70 text-2xl">
-          <span>🎮</span>
-          <span>🕹️</span>
-          <span>💻</span>
-          <span>📱</span>
-          <span>🧠</span>
-        </div>
       </div>
     </section>
   )

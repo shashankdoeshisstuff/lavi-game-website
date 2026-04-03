@@ -1,12 +1,10 @@
 import Hero from '@/components/sections/home/hero'
-import FeaturedGames from '@/components/sections/home/featured-games'
-import AboutPreview from '@/components/sections/home/about-preview'
-import Contact from '@/components/sections/home/contact'
-import Mission from '@/components/sections/home/mission'
-import BrandsSection from '@/components/sections/home/brands-section'
-import ServicesShowcase from '@/components/sections/home/ServicesShowcase'
-import WhyChooseUs from '@/components/sections/home/whyChooseUs'
+import WhyChooseUs from '@/components/sections/home/why-choose-us'
 import ServicesSection from '@/components/sections/home/service-section'
+import PlatformsSection from '@/components/sections/home/platforms-section'
+import GameEnginesSection from '@/components/sections/home/game-engines-section'
+import ProjectsSection from '@/components/sections/home/projects-section'
+import ContactSection from '@/components/sections/home/contact-section'
 
 export default async function Home() {
 
@@ -15,12 +13,10 @@ export default async function Home() {
       <Hero />
       <WhyChooseUs/>
       <ServicesSection/>
-      <FeaturedGames />
-      <BrandsSection/>
-      <ServicesShowcase/>
-      <AboutPreview />
-      <Mission/>
-      <Contact />
+      <PlatformsSection/>
+      <GameEnginesSection/>
+      <ProjectsSection/>
+      <ContactSection />
       {/* <BrandShowcase/>  */}
     </main>
   )
