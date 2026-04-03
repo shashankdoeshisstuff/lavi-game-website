@@ -64,14 +64,14 @@ export default function ContactSection() {
         {/* Header - same as GameEnginesSection */}
         <div className="grid lg:grid-cols-2 gap-10 mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight">
-            LET'S TALK ABOUT
+            {`LET'S TALK ABOUT`}
             <br className="hidden sm:block" />
             YOUR NEXT PROJECT
           </h2>
           <p className="text-gray-600 max-w-xl leading-relaxed">
-            Ready to bring your game idea to life? Reach out to our team. Whether
+            {`Ready to bring your game idea to life? Reach out to our team. Whether
             you need full-cycle development, art production, or expert consulting,
-            we're here to help you succeed.
+            we're here to help you succeed.`}
           </p>
         </div>
 
@@ -173,7 +173,7 @@ export default function ContactSection() {
               <p className="text-gray-600 text-sm">Monday – Friday: 9:00 AM – 6:00 PM (EST)</p>
               <p className="text-gray-600 text-sm">Saturday – Sunday: Closed</p>
               <p className="text-gray-500 text-sm mt-4">
-                📍 We're remote-friendly and ready to collaborate worldwide.
+                {`📍 We're remote-friendly and ready to collaborate worldwide.`}
               </p>
             </div>
           </div>

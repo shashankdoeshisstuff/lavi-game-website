@@ -1,4 +1,4 @@
-import { Inter, Pattaya } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
@@ -9,12 +9,6 @@ import BrandsProvider from '@/components/BrandsProvider'
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
-})
-
-const pattaya = Pattaya({
-  weight: '400',
-  subsets: ['latin'],
-  variable: '--font-pattaya',
 })
 
 export const metadata = {
