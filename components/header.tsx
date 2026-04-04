@@ -54,11 +54,11 @@ export default function Header() {
         </NavigationMenu>
 
         {/* Desktop Actions */}
-        <div className="hidden items-center gap-2 md:flex">
-          <Button className="bg-primary hover:bg-primary/90 rounded-none uppercase">
-            Contact Us <ArrowUpRight />
+        <Link className="hidden items-center gap-2 md:flex" href="contact" passHref>
+          <Button size="lg" className="bg-primary uppercase hover:bg-primary/90 rounded-none">
+            Contact Us <ArrowUpRight/>
           </Button>
-        </div>
+        </Link>
 
         {/* Mobile Menu – client component */}
         <MobileMenu navigationItems={navigationItems} />

@@ -32,7 +32,7 @@ export default function Hero() {
               development.
             </p>
 
-            <Link href="#contact" passHref>
+            <Link href="contact" passHref>
               <Button
                 size="lg"
                 className="bg-primary uppercase hover:bg-primary/90 rounded-none"
