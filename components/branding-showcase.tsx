@@ -20,7 +20,7 @@ export default function BrandShowcase() {
 
       {/* Hero Section */}
       <section className="text-center mb-20">
-        <Branding size="2xl" variant="gradient" showTagline animated />
+        <Branding size="2xl" variant="gradient" showTagline />
       </section>
 
       {/* Size Variations */}

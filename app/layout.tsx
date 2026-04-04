@@ -4,6 +4,7 @@ import Header from '@/components/header'
 import Footer from '@/components/footer'
 import { fetchBrandsSSR } from '@/lib/fetchBrands'
 import BrandsProvider from '@/components/BrandsProvider'
+import { Metadata } from 'next'
 
 // Fonts
 const inter = Inter({
@@ -11,9 +12,27 @@ const inter = Inter({
   variable: '--font-inter',
 })
 
-export const metadata = {
-  title: 'Axenet Games | Creating Immersive Gaming Experiences',
-  description: 'Axenet Games is a premier game development studio creating cutting-edge gaming experiences for players worldwide.',
+
+export const metadata: Metadata = {
+  title: 'Axenet Games | Creating Immersive Gaming Experiences', 
+  description: 'Axenet Games is a premier game development studio creating cutting-edge gaming experiences for players worldwide.', 
+  icons: { 
+    icon: [ 
+      { url: '/images/logo.png', sizes: '32x32', type: 'image/png', }, 
+      { url: '/images/logo.png', sizes: '64x64', type: 'image/png', }, 
+    ], 
+    apple: [ 
+      { url: '/images/logo.png', sizes: '180x180', type: 'image/png', }, 
+    ], 
+  }, 
+  openGraph: { 
+    title: 'Axenet Games | Creating Immersive Gaming Experiences', 
+    description: 'Axenet Games is a premier game development studio creating cutting-edge gaming experiences for players worldwide.', 
+    images: [ 
+      { url: '/images/logo.png', width: 1200, height: 630, }, 
+    ], 
+    type: 'website', 
+  }, 
 }
 
 export default async function RootLayout({

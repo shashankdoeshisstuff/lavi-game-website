@@ -7,49 +7,28 @@ import { useState, useRef, useEffect, useCallback } from 'react';
 
 const projects = [
   {
-    title: 'STAR WARS',
+    title: 'Cyber Revolution',
     description: [
-      'VR-based action-adventure game based on the legendary franchise',
-      'Creating 3D characters with texture variations',
+      'A futuristic open-world RPG set in a cyberpunk metropolis where your choices shape the destiny of the city.',
     ],
-    image: '/images/projects/starwars.jpg',
-    href: '/projects/star-wars',
+    image: '/images/service4.png',
+    href: '/games/cyber-revolution',
   },
   {
-    title: 'FORTNITE',
+    title: 'Ancient Realms',
     description: [
-      'Iconic free-to-play Battle Royale game with over 400 million players worldwide',
-      'Creating concept art for character skins',
+      'Epic fantasy adventure exploring mystical lands filled with magic, legendary creatures, and ancient secrets.',
     ],
-    image: '/images/projects/fortnite.jpg',
-    href: '/projects/fortnite',
+    image: '/images/service5.png',
+    href: '/games/ancient-realms',
   },
   {
-    title: 'IRON ORDER 1919',
+    title: 'Neo Racing X',
     description: [
-      'Cross-platform strategy game for mobile devices and browser',
-      'Creating 3D models of mechs and soldiers',
+      'Future racing with hyper-realistic physics, dynamic weather, and fully customizable vehicles.',
     ],
-    image: '/images/projects/ironorder.jpg',
-    href: '/projects/iron-order',
-  },
-  {
-    title: 'BIRDLY',
-    description: [
-      'VR-based hyperrealistic immersive flight simulator',
-      'Creating ultra-realistic 3D models of birds and environments',
-    ],
-    image: '/images/projects/birdly.jpg',
-    href: '/projects/birdly',
-  },
-  {
-    title: 'MECHACHAIN',
-    description: [
-      'Futuristic sci-fi experience with high-end visuals',
-      'Character and environment development',
-    ],
-    image: '/images/projects/mechachain.jpg',
-    href: '/projects/mechachain',
+    image: '/images/service1.png',
+    href: '/games/neo-racing',
   },
 ];
 

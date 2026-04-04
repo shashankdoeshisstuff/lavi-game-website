@@ -1,11 +1,41 @@
-'use client';
-
 import Link from 'next/link';
 import { Separator } from '@/components/ui/separator';
 import { Facebook, Instagram, Twitter, Youtube, Mail, MapPin } from 'lucide-react';
 import Branding from '@/components/branding';
 
 export default function Footer() {
+  // Navigation links arrays
+  const companyLinks = [
+    { name: 'About Us', href: '/about' },
+    { name: 'Careers', href: '/careers' },
+    /* { name: 'News & Press', href: '/news' }, */
+    { name: 'Contact', href: '/contact' },
+    /* { name: 'Leadership', href: '/leadership' }, */
+  ];
+
+  const gamesLinks = [
+    { name: 'All Games', href: '/games' },
+    /* { name: 'Upcoming Releases', href: '/games/upcoming' }, */
+    { name: 'Featured Titles', href: '/games/featured' },
+    /* { name: 'Game Store', href: '/store' }, */
+    { name: 'Platforms', href: '/platforms' },
+  ];
+
+  const supportLinks = [
+    { name: 'Help Center', href: '/help' },
+    /* { name: 'Community', href: '/community' },
+    { name: 'FAQ', href: '/faq' },
+    { name: 'Developer Portal', href: '/developers' },
+    { name: 'Partnerships', href: '/partners' }, */
+  ];
+
+  const legalLinks = [
+    { name: 'Terms of Service', href: '/terms' },
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Cookie Policy', href: '/cookies' },
+    /* { name: 'Sitemap', href: '/sitemap' }, */
+  ];
+
   return (
     <footer className="w-full bg-black text-white border-x border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-12 md:py-16">
@@ -14,7 +44,7 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="space-y-4">
             <div className="flex items-center gap-2 mb-4">
-              <Branding size="lg" uppercase />
+              <Branding showLogo logoSize='md' size="md" uppercase />
             </div>
             <p className="text-sm text-gray-400 max-w-xs leading-relaxed">
               Creating immersive gaming experiences that push the boundaries of
@@ -25,7 +55,7 @@ export default function Footer() {
             <div className="space-y-2 text-sm">
               <div className="flex items-center gap-2 text-gray-400">
                 <MapPin className="h-4 w-4" />
-                <span>San Francisco, CA</span>
+                <span>143/14, Kesar Bagh, LESA COLONY, Aminabad, Lucknow, Uttar Pradesh 226018</span>
               </div>
               <div className="flex items-center gap-2 text-gray-400">
                 <Mail className="h-4 w-4" />
@@ -66,75 +96,57 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Company */}
+          {/* Company Links */}
           <div className="space-y-3">
             <h3 className="font-bold text-white uppercase tracking-wide text-sm">
               Company
             </h3>
             <nav className="flex flex-col space-y-2 text-sm">
-              <Link href="/about" className="text-gray-400 hover:text-white transition-colors py-1">
-                About Us
-              </Link>
-              <Link href="/careers" className="text-gray-400 hover:text-white transition-colors py-1">
-                Careers
-              </Link>
-              <Link href="/news" className="text-gray-400 hover:text-white transition-colors py-1">
-                News & Press
-              </Link>
-              <Link href="/contact" className="text-gray-400 hover:text-white transition-colors py-1">
-                Contact
-              </Link>
-              <Link href="/leadership" className="text-gray-400 hover:text-white transition-colors py-1">
-                Leadership
-              </Link>
+              {companyLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-gray-400 hover:text-white transition-colors py-1"
+                >
+                  {link.name}
+                </Link>
+              ))}
             </nav>
           </div>
 
-          {/* Games */}
+          {/* Games Links */}
           <div className="space-y-3">
             <h3 className="font-bold text-white uppercase tracking-wide text-sm">
               Games
             </h3>
             <nav className="flex flex-col space-y-2 text-sm">
-              <Link href="/games" className="text-gray-400 hover:text-white transition-colors py-1">
-                All Games
-              </Link>
-              <Link href="/games/upcoming" className="text-gray-400 hover:text-white transition-colors py-1">
-                Upcoming Releases
-              </Link>
-              <Link href="/games/featured" className="text-gray-400 hover:text-white transition-colors py-1">
-                Featured Titles
-              </Link>
-              <Link href="/store" className="text-gray-400 hover:text-white transition-colors py-1">
-                Game Store
-              </Link>
-              <Link href="/platforms" className="text-gray-400 hover:text-white transition-colors py-1">
-                Platforms
-              </Link>
+              {gamesLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-gray-400 hover:text-white transition-colors py-1"
+                >
+                  {link.name}
+                </Link>
+              ))}
             </nav>
           </div>
 
-          {/* Support */}
+          {/* Support Links */}
           <div className="space-y-3">
             <h3 className="font-bold text-white uppercase tracking-wide text-sm">
               Support
             </h3>
             <nav className="flex flex-col space-y-2 text-sm">
-              <Link href="/help" className="text-gray-400 hover:text-white transition-colors py-1">
-                Help Center
-              </Link>
-              <Link href="/community" className="text-gray-400 hover:text-white transition-colors py-1">
-                Community
-              </Link>
-              <Link href="/faq" className="text-gray-400 hover:text-white transition-colors py-1">
-                FAQ
-              </Link>
-              <Link href="/developers" className="text-gray-400 hover:text-white transition-colors py-1">
-                Developer Portal
-              </Link>
-              <Link href="/partners" className="text-gray-400 hover:text-white transition-colors py-1">
-                Partnerships
-              </Link>
+              {supportLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-gray-400 hover:text-white transition-colors py-1"
+                >
+                  {link.name}
+                </Link>
+              ))}
             </nav>
           </div>
         </div>
@@ -146,18 +158,15 @@ export default function Footer() {
             <span>© {new Date().getFullYear()} Axenet IT Services. All rights reserved.</span>
           </div>
           <div className="flex flex-wrap items-center gap-6">
-            <Link href="/terms" className="hover:text-white transition-colors">
-              Terms of Service
-            </Link>
-            <Link href="/privacy" className="hover:text-white transition-colors">
-              Privacy Policy
-            </Link>
-            <Link href="/cookies" className="hover:text-white transition-colors">
-              Cookie Policy
-            </Link>
-            <Link href="/sitemap" className="hover:text-white transition-colors">
-              Sitemap
-            </Link>
+            {legalLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="hover:text-white transition-colors"
+              >
+                {link.name}
+              </Link>
+            ))}
           </div>
         </div>
       </div>
