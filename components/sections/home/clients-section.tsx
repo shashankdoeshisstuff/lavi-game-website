@@ -12,7 +12,7 @@ export default function Clients() {
   ]
 
   return (
-    <section className="w-full border-y bg-background py-8 md:py-12">
+    <section className="w-full border-y bg-background py-4 md:py-8">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
         {/* Marquee Container */}
         <div className="relative overflow-hidden">
@@ -36,8 +36,8 @@ export default function Clients() {
                 <Image
                   src={logo.src}
                   alt={logo.alt}
-                  width={120}
-                  height={40}
+                  width={60}
+                  height={20}
                   className="object-contain opacity-70 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0"
                   loading="lazy"
                 />
