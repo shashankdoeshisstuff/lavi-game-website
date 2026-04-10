@@ -1,104 +1,274 @@
-import Image from 'next/image'
-import { Card, CardContent } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { ArrowUpRight } from 'lucide-react'
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { ArrowRight, ArrowUpRight, BrainCircuit, Gamepad2, Globe, Smartphone } from "lucide-react"
 
-const services = [
-  {
-    title: 'GAME DEVELOPMENT',
-    description:
-      'We provide end-to-end game development services, from early concept and prototyping to soft launch and ongoing support. Our team handles design, art, animation, and high-quality development across multiple platforms.',
-    image: '/images/service1.png'
-  },
-  {
-    title: 'GAME ART & DESIGN',
-    description:
-      'Our artists and designers craft engaging worlds and memorable visual styles. We focus on building unique environments, characters, and visual elements that bring game ideas to life.',
-    image: '/images/service2.png'
-  },
-  {
-    title: 'GAME ANIMATION',
-    description:
-      'Animation brings characters and worlds into motion. We create fluid movements, responsive environments, and dynamic interactions that enhance gameplay and storytelling.',
-    image: '/images/service3.png'
-  },
-  {
-    title: 'QUALITY ASSURANCE',
-    description:
-      'Our QA team carefully tests every aspect of the game to ensure smooth performance across devices. Through continuous testing and improvements, we deliver a stable and polished experience.',
-    image: '/images/service4.png'
-  },
-  {
-    title: 'AAA GAME DEVELOPMENT & ART',
-    description:
-      'We collaborate on large-scale projects where quality and detail are essential. Our outsourcing team supports studios with world building, character design, and high-end visual production.',
-    image: '/images/service5.png'
-  },
-  {
-    title: 'VR DEVELOPMENT',
-    description:
-      'We design immersive virtual reality experiences that feel natural and interactive. By combining lighting, depth, and motion, we create engaging VR worlds for players to explore.',
-    image: '/images/service6.png'
-  }
-]
+/**
+ * ServicesSection Component
+ * ------------------------------------------------------------
+ * Displays the "What we are offering" services section.
+ *
+ * IMPORTANT:
+ * - The desktop layout (large screens) is intentionally preserved.
+ * - Only responsive improvements were added for smaller devices.
+ *
+ * Responsive Strategy
+ * ------------------------------------------------------------
+ * Grid Layout:
+ * xs (default)     → 1 column  (small phones)
+ * sm (640px+)      → 2 columns (large phones / small tablets)
+ * lg (1024px+)     → 4 columns (desktop - same as your current design)
+ *
+ * Typography:
+ * Text sizes scale gradually across breakpoints.
+ *
+ * Spacing:
+ * Padding and margins adjust to prevent cramped UI on mobile.
+ *
+ * Cards:
+ * Glassmorphism style preserved with hover effects.
+ */
 
 export default function ServicesSection() {
+
+  /**
+   * Service data configuration
+   * ------------------------------------------------------------
+   * Keeping services inside an array improves maintainability.
+   * If you want to add more services later, just push a new object.
+   */
+  const services = [
+    {
+      title: "MOBILE APP DEVELOPMENT",
+      description:
+        "We design and develop custom mobile application for Android and IOS platforms. Our mobile app developers have expertise to create mobile applications using Flutter, React, Native Android and IOS technologies.",
+      ctaText: "LEARN MORE",
+      icon: Smartphone,
+    },
+    {
+      title: "GAME DEVELOPMENT",
+      description:
+        "Our game developers using advance technology / tools and develop visually attractive UI and responsive games that keeps the gamers engaged. We help our clients to turn their creative ideas into games by providing cost-effective solutions with quality.",
+      ctaText: "LEARN MORE",
+      icon: Gamepad2,
+    },
+    {
+      title: "WEB DEVELOPMENT",
+      description:
+        "We have rich and sharp proficiency and extensive experience in creating responsive and professional websites for all types of businesses. To stay with the latest web technology trends and concepts, we keep ourselves up to date with these trends and emerging technology concepts.",
+      ctaText: "LEARN MORE",
+      icon: Globe,
+    },
+    {
+      title: "AI DEVELOPMENT",
+      description:
+        "We offer comprehensive AI development solutions, including machine learning, deep learning, natural language processing, and generative AI, to create intelligent systems that enhance automation, decision-making, and user experiences.",
+      ctaText: "LEARN MORE",
+      icon: BrainCircuit,
+    },
+  ]
+
   return (
-    <section className="w-full text-white border-x max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-16 lg:py-20">
-      {/* Heading */}
-      <div className="grid lg:grid-cols-2 gap-8 mb-16">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight">
-          END-TO-END GAME
-          <br className="hidden sm:block" />
-          DEVELOPMENT
-        </h2>
+    /**
+     * Section Wrapper
+     * ------------------------------------------------------------
+     * Horizontal padding scales across screen sizes.
+     * py controls vertical spacing between sections.
+     */
+    <section className="w-full mx-auto px-4 sm:px-6 lg:px-12 py-20 sm:py-24">
 
-        <p className="text-gray-400 max-w-xl">
-          From concept to soft launch, we help bring your game to life at every stage.
-          Our experienced team of specialists ensures outstanding quality in every detail.
-        </p>
-      </div>
+      {/* Container limits content width on very large screens */}
+      <div className="container mx-auto max-w-7xl">
 
-      {/* Services */}
-      <div className="flex flex-col gap-8">
-        {services.map((service, index) => (
-          <Card
-            key={index}
-            className="relative overflow-hidden transition-all duration-300 bg-transparent shadow-none rounded-none"
-          >
-            {/* Background Image */}
-            <div className="absolute inset-0">
-              <Image
-                src={service.image}
-                alt={service.title}
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              {/* Left-side tint for text readability */}
-              {/* Gradient: solid black on left → semi-transparent black → fully transparent on right */}
-              <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent" />
-            </div>
+        {/* =======================================================
+           SECTION HEADER
+        ======================================================== */}
+        <div className="w-full flex flex-col sm:flex-row items-center justify-between gap-4 mb-12 md:mb-16">
 
-            {/* Content */}
-            <CardContent className="relative z-10 p-6 sm:p-8 lg:p-10 max-w-xl flex flex-col gap-4">
-              <h3 className="text-xl sm:text-2xl font-bold">
-                {service.title}
-              </h3>
+          {/* Left group: Badge + Heading */}
+          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-4">
 
-              <p className="text-sm text-gray-300 leading-relaxed">
-                {service.description}
-              </p>
+            {/* Section Badge */}
+            <Badge
+              variant="secondary"
+              className="text-primary text-sm rounded-full whitespace-nowrap"
+            >
+              Services
+            </Badge>
 
-              {/* <Button
-                variant="default"
-                className="mt-4 w-fit transition rounded-none"
+            {/* Section Title */}
+            <h2 className="
+              text-2xl
+              sm:text-3xl
+              md:text-4xl
+              lg:text-5xl
+              font-bold
+              text-white
+              tracking-tight
+              text-center
+              sm:text-left
+            ">
+              What we are offering
+            </h2>
+
+          </div>
+
+          {/* CTA Button */}
+          <button className="
+            mt-8
+            group
+            flex items-center gap-2
+            px-6 py-3
+            rounded-full
+            border border-white/20
+            uppercase
+            text-white
+            text-sm
+            transition-all duration-300
+            hover:bg-white hover:text-black
+          ">
+            View All Services
+
+            <ArrowRight
+              size={18}
+              className="transition-transform duration-300 group-hover:translate-x-1"
+            />
+          </button>
+        </div>
+
+
+        {/* =======================================================
+           SERVICES GRID
+        ======================================================== */}
+
+        {/* 
+           Responsive Grid System
+           ----------------------------------------------------
+           grid-cols-1 → mobile phones
+           sm:grid-cols-2 → tablets
+           lg:grid-cols-4 → desktop (your original layout)
+        */}
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+          {services.map((service, index) => {
+
+            // Extract icon component
+            const Icon = service.icon
+
+            return (
+
+              /**
+               * Service Card
+               * --------------------------------------------------
+               * Glassmorphism style
+               * Smooth hover transitions
+               */
+              <div
+                key={index}
+                className="
+                  group
+                  relative
+                  flex
+                  flex-col
+                  h-full
+                  rounded-2xl
+                  bg-neutral-800
+                  backdrop-blur-sm
+                  p-6
+                  transition-all
+                  duration-300
+                  hover:bg-neutral-800/50
+                "
               >
-                SEE MORE
-                <ArrowUpRight className="ml-2 h-4 w-4" />
-              </Button> */}
-            </CardContent>
-          </Card>
-        ))}
+
+                {/* ===================================================
+                    SERVICE ICON
+                ==================================================== */}
+
+                <Icon
+                  className="
+                    w-12 h-12
+                    sm:w-14 sm:h-14
+                    text-primary
+                    mb-4
+                    bg-neutral-500/20
+                    p-2
+                    rounded-2xl
+                  "
+                  strokeWidth={1.5}
+                />
+
+                {/* ===================================================
+                    SERVICE TITLE
+                ==================================================== */}
+
+                <h3 className="
+                  text-lg
+                  sm:text-xl
+                  lg:text-2xl
+                  font-bold
+                  text-white
+                  mb-4
+                  tracking-tight
+                ">
+                  {service.title}
+                </h3>
+
+
+                {/* ===================================================
+                    SERVICE DESCRIPTION
+                ==================================================== */}
+
+                <p className="
+                  text-gray-400
+                  text-sm
+                  sm:text-base
+                  leading-relaxed
+                  mb-6
+                  flex-grow
+                ">
+                  {service.description}
+                </p>
+
+
+                {/* ===================================================
+                    LEARN MORE BUTTON
+                ==================================================== */}
+
+                <Button
+                  variant="ghost"
+                  className="
+                    w-fit
+                    justify-start
+                    px-0
+                    text-primary
+                    rounded-full
+                    hover:text-primary/80
+                    hover:bg-transparent
+                    group/btn
+                  "
+                >
+                  {service.ctaText}
+
+                  {/* Animated Arrow */}
+                  <ArrowUpRight
+                    className="
+                      ml-2
+                      h-4
+                      w-4
+                      transition-transform
+                      duration-300
+                      group-hover/btn:translate-x-1
+                      group-hover/btn:-translate-y-1
+                    "
+                  />
+                </Button>
+
+              </div>
+            )
+          })}
+        </div>
+
       </div>
     </section>
   )

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Separator } from '@/components/ui/separator';
 import { Facebook, Instagram, Twitter, Youtube, Mail, MapPin } from 'lucide-react';
-import Branding from '@/components/branding';
+import Image from 'next/image';
 
 export default function Footer() {
   // Navigation links arrays
@@ -37,14 +37,23 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="w-full bg-black text-white border-x border-white/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-12 md:py-16">
+    <footer className="w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-12 md:py-16 border border-white/10 rounded-4xl bg-black/20 mb-12">
         {/* Top Grid */}
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand Column */}
           <div className="space-y-4">
-            <div className="flex items-center gap-2 mb-4">
-              <Branding showLogo logoSize='md' size="md" uppercase />
+            <div className="mb-4">
+              <Link href="/" className="inline-block">
+                <Image
+                  src="/images/Asset_24xs.png"
+                  alt="Axenet logo"
+                  width={140}
+                  height={70}
+                  className="h-auto w-auto max-w-[140px] md:max-w-[160px] object-contain"
+                  priority
+                />
+              </Link>
             </div>
             <p className="text-sm text-gray-400 max-w-xs leading-relaxed">
               Creating immersive gaming experiences that push the boundaries of

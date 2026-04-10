@@ -12,10 +12,9 @@ const inter = Inter({
   variable: '--font-inter',
 })
 
-
 export const metadata: Metadata = {
-  title: 'Axenet Games | Creating Immersive Gaming Experiences', 
-  description: 'Axenet Games is a premier game development studio creating cutting-edge gaming experiences for players worldwide.', 
+  title: 'Axenet IT Services | Creating Immersive Gaming Experiences', 
+  description: 'Axenet IT Services is a premier game development studio creating cutting-edge gaming experiences for players worldwide.', 
   icons: { 
     icon: [ 
       { url: '/images/logo.png', sizes: '32x32', type: 'image/png', }, 
@@ -26,8 +25,8 @@ export const metadata: Metadata = {
     ], 
   }, 
   openGraph: { 
-    title: 'Axenet Games | Creating Immersive Gaming Experiences', 
-    description: 'Axenet Games is a premier game development studio creating cutting-edge gaming experiences for players worldwide.', 
+    title: 'Axenet IT Services  | Creating Immersive Gaming Experiences', 
+    description: 'Axenet IT Services is a premier game development studio creating cutting-edge gaming experiences for players worldwide.', 
     images: [ 
       { url: '/images/logo.png', width: 1200, height: 630, }, 
     ], 
@@ -44,45 +43,71 @@ export default async function RootLayout({
 
   return (
     <html lang="en" className='dark'>
-      <body className={`${inter.className} relative`}>
+      <body className={`font-sans relative`}>
         <BrandsProvider brands={brands} />
 
-        {/* Global Background Elements */}
-        {/* Grid Pattern */}
-        {/* <div className="fixed inset-0 -z-20">
-          <svg className="w-full h-full text-muted-foreground opacity-20" xmlns="http://www.w3.org/2000/svg" fill="none">
+        {/* Premium Capsule Pattern Background (Visible Version) */}
+        <div className="fixed inset-0 -z-20 opacity-[0.20]">
+
+          <svg
+            className="w-full h-full"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <defs>
-              <pattern id="grid-pattern" width="40" height="40" patternUnits="userSpaceOnUse">
-                <path d="M40 0H0V40" stroke="currentColor" strokeWidth="0.5"/>
+              <pattern
+                id="capsule-pattern"
+                width="70"
+                height="140"
+                patternUnits="userSpaceOnUse"
+              >
+                {/* Left Capsule */}
+                <rect
+                  x="8"
+                  y="0"
+                  width="18"
+                  height="120"
+                  rx="12"
+                  fill="none"
+                  stroke="white"
+                  strokeWidth="1"
+                  opacity="0.5"
+                />
+
+                {/* Right Capsule */}
+                <rect
+                  x="40"
+                  y="20"
+                  width="18"
+                  height="120"
+                  rx="12"
+                  fill="none"
+                  stroke="white"
+                  strokeWidth="1"
+                  opacity="0.5"
+                />
               </pattern>
             </defs>
-            <rect width="100%" height="100%" fill="url(#grid-pattern)" />
+
+            <rect width="100%" height="100%" fill="url(#capsule-pattern)" />
           </svg>
-        </div> */}
+        </div>
 
-        {/* Gradient Orbs */}
-        {/* <div className="fixed inset-0 -z-10 overflow-hidden">
-          <div className="absolute top-10 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-[blob_20s_infinite]" />
-          <div className="absolute bottom-10 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-[blob_25s_infinite]" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-blue-500/5 rounded-full blur-3xl animate-[blob_30s_infinite]" />
-        </div> */}
+{/* Premium Multi-Directional Fade */}
+<div className="fixed inset-0 -z-10 pointer-events-none">
 
-        {/* Particles */}
-        {/* <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
-          {Array.from({ length: 20 }).map((_, i) => (
-            <span
-              key={i}
-              className="absolute w-1 h-1 bg-primary/30 rounded-full animate-pulse"
-              style={{
-                top: `${Math.random() * 100}%`,
-                left: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 5}s`,
-                animationDuration: `${3 + Math.random() * 4}s`,
-              }}
-            />
-          ))}
-        </div> */}
+  {/* Top Fade */}
+  <div className="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-black to-transparent" />
 
+  {/* Bottom Fade */}
+  <div className="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-black to-transparent" />
+
+  {/* Left Fade */}
+  <div className="absolute top-0 left-0 h-full w-64 bg-gradient-to-r from-black to-transparent" />
+
+  {/* Right Fade */}
+  <div className="absolute top-0 right-0 h-full w-64 bg-gradient-to-l from-black to-transparent" />
+
+</div>
         {/* Content */}
         <div className="relative z-0">
           <Header />
