@@ -1,14 +1,15 @@
-// app/services/page.tsx
-import ServicesHero from '@/components/sections/services/ServicesHero'
-import ServicesGrid from '@/components/sections/services/ServicesGrid'
-import ServicesCTA from '@/components/sections/services/ServicesCTA'
+import { Hero } from '@/components/sections/services/Hero'
+import ServicesSection from '@/components/sections/services/service-section'
+import WhySection from '@/components/sections/services/WhySection'
+import ContactSection from '@/components/contact-section'
 
 export default function ServicesPage() {
   return (
-    <main className="min-h-screen bg-background">
-      <ServicesHero />
-      <ServicesGrid />
-      <ServicesCTA />
+    <main className="min-h-screen">
+      <Hero/>
+      <ServicesSection/>
+      <WhySection/>
+      <ContactSection/>
     </main>
   )
 }

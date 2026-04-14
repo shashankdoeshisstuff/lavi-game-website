@@ -18,8 +18,10 @@ import { MobileMenu } from "./mobile-menu";
 const navigationItems = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
+  { name: "Services", href: "/services" },
+  { name: "Projects", href: "/projects" },
   // "Games" will be handled separately as a trigger
-  { name: "Careers", href: "/careers" },
+  /* { name: "Careers", href: "/careers" }, */
   { name: "Contact", href: "/contact" },
 ];
 
