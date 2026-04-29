@@ -1,6 +1,5 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight } from "lucide-react"
 import { projects } from "@/lib/projects"
 
 export default function ProjectsSection() {
@@ -28,24 +27,22 @@ export default function ProjectsSection() {
           >
             <div
               className="
+                relative
                 w-full 
                 h-[160px] 
                 sm:h-[180px] 
                 md:h-[200px] 
                 bg-[#1a1a1a] 
                 rounded-xl 
-                overflow-hidden 
-                flex 
-                items-center 
-                justify-center
+                overflow-hidden
               "
             >
               <Image
                 src={project.image}
                 alt={project.title}
-                width={300}
-                height={200}
-                className="object-contain w-full h-full transition-transform duration-300 group-hover:scale-105"
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </div>
             <div className="mt-4">

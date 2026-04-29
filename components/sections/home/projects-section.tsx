@@ -27,32 +27,32 @@ export default function ProjectsSection() {
     {
       title: "Briclay Tech",
       category: "App Development",
-      image: "/images/p1.jpg",
+      image: "/images/projects/briclay-tech1.webp",
     },
     {
       title: "MDP Web",
       category: "Web App (POS)",
-      image: "/images/p4.jpg",
+      image: "/images/projects/mdp-web1.webp",
     },
     {
       title: "TasksMate",
       category: "Mobile App",
-      image: "/images/p2.jpg",
+      image: "/images/projects/taskmate1.webp",
     },
     {
       title: "Towing BMS Web",
       category: "Web App",
-      image: "/images/p7.jpg",
+      image: "/images/projects/towing-bms-web1.webp",
     },
     {
       title: "CKC Trucking",
       category: "Mobile App",
-      image: "/images/p3.jpg",
+      image: "/images/projects/ckc-trucking1.webp",
     },
     {
       title: "Briclay Biz",
       category: "Web Design",
-      image: "/images/p5.jpg",
+      image: "/images/projects/briclay-biz1.webp",
     },
   ]
 
@@ -112,24 +112,13 @@ export default function ProjectsSection() {
               hover:bg-black/80
             "
           >
-            <div className="
-              w-full 
-              h-[160px] 
-              sm:h-[180px] 
-              md:h-[200px] 
-              bg-[#1a1a1a] 
-              rounded-xl 
-              overflow-hidden 
-              flex 
-              items-center 
-              justify-center
-            ">
+            <div className="relative w-full h-[160px] sm:h-[180px] md:h-[200px] bg-[#1a1a1a] rounded-xl overflow-hidden">
               <Image
                 src={project.image}
                 alt={project.title}
-                width={300}
-                height={200}
-                className="object-contain w-full h-full transition-transform duration-300 group-hover:scale-105"
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </div>
             <div className="mt-4">

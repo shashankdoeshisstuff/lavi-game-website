@@ -2,8 +2,6 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
-import { fetchBrandsSSR } from '@/lib/fetchBrands'
-import BrandsProvider from '@/components/BrandsProvider'
 import { Metadata } from 'next'
 
 // Fonts
@@ -39,13 +37,9 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const brands = await fetchBrandsSSR();
-
   return (
     <html lang="en" className='dark'>
       <body className={`font-sans relative`}>
-        <BrandsProvider brands={brands} />
-
         {/* Premium Capsule Pattern Background (Visible Version) */}
         <div className="fixed inset-0 -z-20 opacity-[0.20]">
 
@@ -92,22 +86,22 @@ export default async function RootLayout({
           </svg>
         </div>
 
-{/* Premium Multi-Directional Fade */}
-<div className="fixed inset-0 -z-10 pointer-events-none">
+        {/* Premium Multi-Directional Fade */}
+        <div className="fixed inset-0 -z-10 pointer-events-none">
 
-  {/* Top Fade */}
-  <div className="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-black to-transparent" />
+          {/* Top Fade */}
+          <div className="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-black to-transparent" />
 
-  {/* Bottom Fade */}
-  <div className="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-black to-transparent" />
+          {/* Bottom Fade */}
+          <div className="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-black to-transparent" />
 
-  {/* Left Fade */}
-  <div className="absolute top-0 left-0 h-full w-64 bg-gradient-to-r from-black to-transparent" />
+          {/* Left Fade */}
+          <div className="absolute top-0 left-0 h-full w-64 bg-gradient-to-r from-black to-transparent" />
 
-  {/* Right Fade */}
-  <div className="absolute top-0 right-0 h-full w-64 bg-gradient-to-l from-black to-transparent" />
+          {/* Right Fade */}
+          <div className="absolute top-0 right-0 h-full w-64 bg-gradient-to-l from-black to-transparent" />
 
-</div>
+        </div>
         {/* Content */}
         <div className="relative z-0">
           <Header />

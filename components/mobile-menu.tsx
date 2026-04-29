@@ -1,120 +1,92 @@
-// components/sections/home/MobileMenu.tsx
-'use client'
+'use client';
 
-import { useState } from 'react'
-import Link from 'next/link'
-import { Button } from '@/components/ui/button'
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
-import { Menu, X,  ChevronDown, ArrowRight } from 'lucide-react'
-import { cn } from '@/lib/utils'
+import Link from 'next/link';
+import { Menu, ArrowRight, X } from 'lucide-react';
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetClose,
+  SheetTitle,
+  SheetDescription,
+} from '@/components/ui/sheet';
+import { Button } from '@/components/ui/button';
 
 interface MobileMenuProps {
-  navigationItems: Array<{ name: string; href: string }>
-  gamesSubmenu?: Array<{ title: string; href: string; description?: string }>
+  navigationItems: Array<{ name: string; href: string }>;
 }
 
-export function MobileMenu({ navigationItems, gamesSubmenu }: MobileMenuProps) {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [gamesOpen, setGamesOpen] = useState(false)
-
+export function MobileMenu({ navigationItems }: MobileMenuProps) {
   return (
-    <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
+    <Sheet>
       <SheetTrigger asChild>
         <Button
           variant="ghost"
           size="icon"
           className="md:hidden"
-          aria-label="Toggle menu"
+          aria-label="Open menu"
         >
-          {isMenuOpen ? (
-            <X className="h-6 w-6 text-foreground" />
-          ) : (
-            <Menu className="h-6 w-6 text-foreground" />
-          )}
+          <Menu className="h-6 w-6 text-foreground" />
         </Button>
       </SheetTrigger>
-      <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-        <nav className="flex flex-col gap-4 mt-8">
-          {navigationItems.map((item) => {
-            // Check if this is the "Games" item and we have a submenu
-            if (item.name === 'Games' && gamesSubmenu && gamesSubmenu.length > 0) {
-              return (
-                <div key={item.name} className="border-b border-border pb-2">
-                  <button
-                    onClick={() => setGamesOpen(!gamesOpen)}
-                    className="flex w-full items-center justify-between py-2 text-lg font-medium rounded-none px-4 hover:bg-accent transition-colors"
-                  >
-                    {item.name}
-                    <ChevronDown
-                      className={cn(
-                        "h-5 w-5 transition-transform duration-200",
-                        gamesOpen && "rotate-180"
-                      )}
-                    />
-                  </button>
-                  {gamesOpen && (
-                    <div className="ml-6 mt-1 flex flex-col gap-2 border-l border-border pl-4">
-                      {gamesSubmenu.map((sub) => (
-                        <Link
-                          key={sub.href}
-                          href={sub.href}
-                          className="py-2 text-sm text-muted-foreground hover:text-primary transition-colors"
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          {sub.title}
-                          {sub.description && (
-                            <span className="block text-xs text-muted-foreground/70 mt-0.5">
-                              {sub.description}
-                            </span>
-                          )}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              )
-            }
 
-            // Regular link (non-Games items)
-            return (
+      <SheetContent
+        side="top"
+        className="w-full h-full p-0 flex flex-col bg-background/95 backdrop-blur-sm border-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:slide-out-to-top data-[state=open]:slide-in-from-top [&>button]:hidden"
+      >
+        {/* Visually hidden title & description – for screen readers */}
+        <SheetTitle className="sr-only">Mobile navigation menu</SheetTitle>
+        <SheetDescription className="sr-only">
+          Navigate through the main sections of the website.
+        </SheetDescription>
+
+        {/* Close button at top‑right */}
+        <div className="flex justify-end p-4">
+          <SheetClose asChild>
+            <Button variant="ghost" size="icon" aria-label="Close menu">
+              <X className="h-6 w-6" />
+            </Button>
+          </SheetClose>
+        </div>
+
+        {/* Centered navigation */}
+        <nav className="flex flex-col items-center justify-center flex-1 gap-6 px-4">
+          {navigationItems.map((item) => (
+            <SheetClose asChild key={item.name}>
               <Link
-                key={item.name}
                 href={item.href}
-                className="flex py-2 text-lg font-medium rounded-none px-4 hover:bg-accent transition-colors"
-                onClick={() => setIsMenuOpen(false)}
+                className="text-2xl sm:text-3xl font-medium py-2 px-4 rounded-md hover:bg-accent transition-colors"
               >
                 {item.name}
               </Link>
-            )
-          })}
-          <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
-            <button 
-              className="
-                w-full
-                group
-                flex items-center gap-2
-                px-5 py-2.5
-                sm:px-6 sm:py-3
-                bg-primary
-                text-black
-                uppercase
-                text-md
-                sm:text-sm
-                font-medium
-                transition-all duration-300
-                hover:bg-white hover:text-black
-                hover:border-white
-              "
-            >
-              Contact us
-              <ArrowRight
-                size={16}
-                className="transition-transform duration-300 group-hover:translate-x-1 sm:w-[18px] sm:h-[18px]"
-              />
-            </button>
-          </Link>
+            </SheetClose>
+          ))}
+
+          <SheetClose asChild>
+            <Link href="/contact" className="mt-8">
+              <Button
+                className="
+                  group
+                  flex items-center justify-center gap-2
+                  px-6 py-3 h-auto
+                  bg-primary text-black
+                  uppercase text-lg font-medium
+                  rounded-full
+                  hover:bg-white hover:text-black
+                  transition-all duration-300
+                  min-w-[200px]
+                "
+              >
+                Contact us
+                <ArrowRight
+                  size={18}
+                  className="transition-transform duration-300 group-hover:translate-x-1"
+                />
+              </Button>
+            </Link>
+          </SheetClose>
         </nav>
       </SheetContent>
     </Sheet>
-  )
+  );
 }

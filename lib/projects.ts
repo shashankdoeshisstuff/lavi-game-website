@@ -23,8 +23,8 @@ export const projects: Project[] = [
     shortDescription: "User-friendly grocery shopping app with seamless navigation and secure payments.",
     description:
       "Briclay is a user-friendly grocery shopping app that simplifies your daily needs. Browse a wide range of fresh produce, household essentials, and more, all in one place. Enjoy seamless navigation, secure payments, and doorstep delivery for a convenient shopping experience.",
-    image: "/images/p1.jpg",
-    heroImage: "/images/p1-hero.jpg",
+    image: "/images/projects/briclay-tech1.webp",
+    heroImage: "/images/projects/briclay-tech1.webp",
     features: [
       "User-centric design with intuitive navigation",
       "Robust backend integration for real-time inventory",
@@ -36,7 +36,7 @@ export const projects: Project[] = [
       "Loyalty points and referral program",
     ],
     technologies: ["Flutter", "Firebase", "Node.js", "MongoDB", "Machine Learning"],
-    gallery: ["/images/p1-g1.jpg", "/images/p1-g2.jpg", "/images/p1-g3.jpg"],
+    gallery: ["/images/projects/briclay-tech1.webp", "/images/projects/briclay-tech2.webp", "/images/projects/briclay-tech3.webp"],
     liveUrl: "https://briclaytech.com",
     appStoreUrl: "#",
     playStoreUrl: "#",
@@ -48,8 +48,8 @@ export const projects: Project[] = [
     shortDescription: "Modern Point of Sale system tailored for coffee shops and small cafes.",
     description:
       "The MDP Coffee House POS is a modern Point of Sale (POS) system tailored for coffee shops and small cafes. It streamlines order management, inventory tracking, and payment processing, ensuring smooth operations and enhanced customer experiences. Designed for efficiency, the system supports dine-in, takeout, and delivery orders, along with features like employee management, analytics, and customizable menus.",
-    image: "/images/p4.jpg",
-    heroImage: "/images/p4-hero.jpg",
+    image: "/images/projects/mdp-web1.webp",
+    heroImage: "/images/projects/mdp-web1.webp",
     features: [
       "Real-time sales and inventory statistics dashboard",
       "Customizable menu with variations and add-ons",
@@ -61,7 +61,7 @@ export const projects: Project[] = [
       "Offline mode with automatic sync",
     ],
     technologies: ["React", "Node.js", "Express", "MongoDB", "JWT", "Stripe"],
-    gallery: ["/images/p4-g1.jpg", "/images/p4-g2.jpg"],
+    gallery: ["/images/projects/mdp-web1.webp", "/images/projects/mdp-web2.webp", "/images/projects/mdp-web2.webp"],
     liveUrl: "https://mdpweb.app",
   },
   {
@@ -71,8 +71,8 @@ export const projects: Project[] = [
     shortDescription: "Ultimate productivity companion for task and project management.",
     description:
       "TasksMate is your ultimate productivity companion, designed to simplify task and project management. Whether you're an individual aiming to stay organized or a team collaborating on complex projects, TasksMate offers intuitive tools for task scheduling, real-time collaboration, and insightful analytics. Stay productive, meet deadlines, and achieve your goals effortlessly with TasksMate.",
-    image: "/images/p2.jpg",
-    heroImage: "/images/p2-hero.jpg",
+    image: "/images/projects/taskmate1.webp",
+    heroImage: "/images/projects/taskmate2.webp",
     features: [
       "Kanban and Gantt chart views",
       "Real-time notifications and custom reminders",
@@ -84,7 +84,7 @@ export const projects: Project[] = [
       "Light/dark mode and customizable preferences",
     ],
     technologies: ["React Native", "Redux Toolkit", "Node.js", "Socket.io", "MongoDB"],
-    gallery: ["/images/p2-g1.jpg", "/images/p2-g2.jpg", "/images/p2-g3.jpg"],
+    gallery: ["/images/projects/taskmate1.webp", "/images/projects/taskmate2.webp", "/images/projects/taskmate3.webp"],
     appStoreUrl: "#",
     playStoreUrl: "#",
   },
@@ -95,8 +95,8 @@ export const projects: Project[] = [
     shortDescription: "Comprehensive business management system for towing and roadside assistance.",
     description:
       "The Towing BMS (Business Management System) Web App is a comprehensive platform designed to streamline operations for towing and roadside assistance businesses. Built using Flutter, it offers a dynamic, responsive, and cross-platform experience for managing towing requests, vehicle dispatching, invoicing, customer interactions, and staff operations.",
-    image: "/images/p7.jpg",
-    heroImage: "/images/p7-hero.jpg",
+    image: "/images/projects/towing-bms-web1.webp",
+    heroImage: "/images/projects/towing-bms-web1.webp",
     features: [
       "Real-time dashboard with active requests and KPIs",
       "Centralized request management with status tracking",
@@ -108,7 +108,7 @@ export const projects: Project[] = [
       "Detailed reporting and analytics",
     ],
     technologies: ["Flutter", "Node.js", "Express", "Firebase Firestore", "Google Maps API"],
-    gallery: ["/images/p7-g1.jpg", "/images/p7-g2.jpg"],
+    gallery: ["/images/projects/towing-bms-web1.webp", "/images/projects/towing-bms-web1.webp", "/images/projects/towing-bms-web3.webp"],
     liveUrl: "#",
   },
   {
@@ -118,8 +118,8 @@ export const projects: Project[] = [
     shortDescription: "Comprehensive logistics management platform for trucking companies and drivers.",
     description:
       "The CKC Trucking App is a comprehensive logistics management platform tailored for trucking companies and drivers. It streamlines fleet operations, enhances communication, and provides real-time tracking to ensure efficient delivery management. Designed with the needs of trucking professionals in mind, the app simplifies route planning, load management, compliance tracking, and payment processes.",
-    image: "/images/p3.jpg",
-    heroImage: "/images/p3-hero.jpg",
+    image: "/images/projects/ckc-trucking1.webp",
+    heroImage: "/images/projects/ckc-trucking1.webp",
     features: [
       "Real-time GPS tracking of vehicles",
       "Load assignment and status tracking",
@@ -131,7 +131,7 @@ export const projects: Project[] = [
       "Offline mode for drivers",
     ],
     technologies: ["React Native", "Firebase", "Google Maps API", "Node.js"],
-    gallery: ["/images/p3-g1.jpg", "/images/p3-g2.jpg"],
+    gallery: ["/images/projects/ckc-trucking1.webp", "/images/projects/ckc-trucking2.webp", "/images/projects/ckc-trucking3.webp"],
     appStoreUrl: "#",
     playStoreUrl: "#",
   },
@@ -142,8 +142,8 @@ export const projects: Project[] = [
     shortDescription: "Comprehensive merchant app for grocery store operations management.",
     description:
       "The Briclay Business App is a comprehensive platform designed to streamline grocery store operations for merchants. It offers powerful tools for managing inventory, processing orders, tracking sales, and engaging customers. With features like real-time updates, secure payment management, and actionable analytics, the app enables merchants to optimize efficiency and grow their business.",
-    image: "/images/p5.jpg",
-    heroImage: "/images/p5-hero.jpg",
+    image: "/images/projects/briclay-biz1.webp",
+    heroImage: "/images/projects/briclay-biz1.webp",
     features: [
       "Dashboard with daily sales and KPIs",
       "Product and inventory management with bulk upload",
@@ -155,7 +155,7 @@ export const projects: Project[] = [
       "Multi-store management and staff accounts",
     ],
     technologies: ["React", "Node.js", "Express", "MongoDB", "Firebase", "WebSockets"],
-    gallery: ["/images/p5-g1.jpg", "/images/p5-g2.jpg"],
+    gallery: ["/images/projects/briclay-biz1.webp", "/images/projects/briclay-biz2.webp", "/images/projects/briclay-biz2.webp"],
     liveUrl: "#",
   },
   {
@@ -165,8 +165,8 @@ export const projects: Project[] = [
     shortDescription: "Streamlined digital lending platform for quick personal loans.",
     description:
       "ZOOGLIE LOAN APP is a streamlined digital lending platform designed to provide quick and hassle-free access to personal loans. The app caters to users seeking instant financial assistance, offering a user-friendly interface, secure transactions, and a seamless application process. With ZOOGLIE, users can apply for loans, track their repayment schedules, and manage their finances all in one place.",
-    image: "/images/p8.jpg",
-    heroImage: "/images/p8-hero.jpg",
+    image: "/images/projects/zooglie1.webp",
+    heroImage: "/images/projects/zooglie1.webp",
     features: [
       "Quick loan application with real-time eligibility check",
       "Secure document upload and KYC verification",
@@ -178,7 +178,7 @@ export const projects: Project[] = [
       "Referral program and instant disbursement",
     ],
     technologies: ["Flutter", "Node.js", "Express", "MongoDB", "Credit Bureau APIs"],
-    gallery: ["/images/p8-g1.jpg", "/images/p8-g2.jpg"],
+    gallery: ["/images/projects/zooglie1.webp", "/images/projects/zooglie2.webp", "/images/projects/zooglie3.webp"],
     appStoreUrl: "#",
     playStoreUrl: "#",
   },
@@ -189,8 +189,8 @@ export const projects: Project[] = [
     shortDescription: "Secure platform connecting intended parents, surrogates, and medical professionals.",
     description:
       "The Surrogacy App is a specialized platform designed to connect intended parents, surrogates, and medical professionals. It provides a secure and supportive environment for managing the surrogacy journey, from initial matching to post-delivery care. With personalized guidance, detailed progress tracking, and communication tools, the app ensures a seamless and transparent experience for everyone involved.",
-    image: "/images/p9.jpg",
-    heroImage: "/images/p9-hero.jpg",
+    image: "/images/projects/surrogacy1.webp",
+    heroImage: "/images/projects/surrogacy1.webp",
     features: [
       "Role-specific registration and profile verification",
       "Intelligent matching system based on preferences",
@@ -202,7 +202,7 @@ export const projects: Project[] = [
       "Multilingual support and robust privacy",
     ],
     technologies: ["React Native", "Firebase", "TypeScript", "Node.js", "WebRTC"],
-    gallery: ["/images/p9-g1.jpg", "/images/p9-g2.jpg"],
+    gallery: ["/images/projects/surrogacy1.webp", "/images/projects/surrogacy2.webp", "/images/projects/surrogacy3.webp"],
     appStoreUrl: "#",
     playStoreUrl: "#",
   },
@@ -213,8 +213,8 @@ export const projects: Project[] = [
     shortDescription: "Feature-rich school and educational institution management platform.",
     description:
       "The MCMS app is a feature-rich platform designed to simplify school and educational institution management. It streamlines administrative tasks, facilitates communication between teachers, students, and parents, and enhances the learning experience with powerful tools. MCMS provides a one-stop solution for managing classes, attendance, exams, fee payments, and more, ensuring efficiency and transparency.",
-    image: "/images/p10.jpg",
-    heroImage: "/images/p10-hero.jpg",
+    image: "/images/projects/mcms1.webp",
+    heroImage: "/images/projects/mcms2.webp",
     features: [
       "Dashboard with school activities and announcements",
       "Student and teacher record management",
@@ -226,7 +226,7 @@ export const projects: Project[] = [
       "Multilingual and role-based access",
     ],
     technologies: ["Flutter", "Node.js", "PostgreSQL", "Firebase", "GPS Integration"],
-    gallery: ["/images/p10-g1.jpg", "/images/p10-g2.jpg"],
+    gallery: ["/images/projects/mcms1.webp", "/images/projects/mcms2.webp", "/images/projects/mcms3.webp"],
     appStoreUrl: "#",
     playStoreUrl: "#",
   },
@@ -237,8 +237,8 @@ export const projects: Project[] = [
     shortDescription: "E-commerce platform for buying and managing hydraulic and vehicle parts.",
     description:
       "The Rancho Hydraulic App is a comprehensive platform designed for buying and managing hydraulic and vehicle parts. Tailored for vehicle owners, mechanics, and suppliers, the app simplifies the process of finding and purchasing high-quality hydraulic components, spare parts, and accessories. With an intuitive design, real-time inventory updates, and secure payment options, the app streamlines operations for businesses and individuals.",
-    image: "/images/p11.jpg",
-    heroImage: "/images/p11-hero.jpg",
+    image: "/images/projects/rancho-hydraulic1.webp",
+    heroImage: "/images/projects/rancho-hydraulic1.webp",
     features: [
       "Browse featured parts with search and filters",
       "Detailed product listings with compatibility info",
@@ -250,7 +250,7 @@ export const projects: Project[] = [
       "Barcode/QR scanner for quick part lookup",
     ],
     technologies: ["React Native", "Node.js", "MongoDB", "Stripe", "Firebase"],
-    gallery: ["/images/p11-g1.jpg", "/images/p11-g2.jpg"],
+    gallery: ["/images/projects/rancho-hydraulic1.webp", "/images/projects/rancho-hydraulic2.webp", "/images/projects/rancho-hydraulic3.webp"],
     appStoreUrl: "#",
     playStoreUrl: "#",
   },
@@ -261,8 +261,8 @@ export const projects: Project[] = [
     shortDescription: "Smart control solution for electric systems and devices via Bluetooth.",
     description:
       "The Start And Stop (E2C) App is a smart control solution for electric systems and devices. Tailored for businesses and individuals, the app enables users to monitor and control connected devices remotely, optimizing energy efficiency and operational reliability. With Bluetooth-based connectivity, real-time status monitoring, and an intuitive interface, the app ensures seamless integration and ease of use.",
-    image: "/images/p12.jpg",
-    heroImage: "/images/p12-hero.jpg",
+    image: "/images/projects/start-and-stop1.webp",
+    heroImage: "/images/projects/start-and-stop1.webp",
     features: [
       "Quick device status overview with on/off toggles",
       "Add and manage devices with custom names and groups",
@@ -274,7 +274,7 @@ export const projects: Project[] = [
       "Multi-device support and offline mode",
     ],
     technologies: ["Flutter", "Bluetooth Low Energy", "Firebase", "Node.js"],
-    gallery: ["/images/p12-g1.jpg", "/images/p12-g2.jpg"],
+    gallery: ["/images/projects/start-and-stop1.webp", "/images/projects/start-and-stop2.webp", "/images/projects/start-and-stop3.webp"],
     appStoreUrl: "#",
     playStoreUrl: "#",
   },
@@ -285,8 +285,8 @@ export const projects: Project[] = [
     shortDescription: "All-in-one platform for cable TV and internet service subscribers.",
     description:
       "The City Cable App is an all-in-one platform designed for cable TV and internet service subscribers. It provides users with a seamless experience to manage their subscriptions, pay bills, and explore entertainment options on the go. The app offers real-time updates, personalized recommendations, and efficient customer support, making it a convenient tool for staying connected and entertained.",
-    image: "/images/p13.jpg",
-    heroImage: "/images/p13-hero.jpg",
+    image: "/images/projects/city-cable1.webp",
+    heroImage: "/images/projects/city-cable2.webp",
     features: [
       "Subscription overview with personalized recommendations",
       "Plan management with upgrade/downgrade options",
@@ -298,18 +298,18 @@ export const projects: Project[] = [
       "Push notifications for payments and new content",
     ],
     technologies: ["React", "Next.js", "Tailwind CSS", "Node.js", "PostgreSQL"],
-    gallery: ["/images/p13-g1.jpg", "/images/p13-g2.jpg"],
+    gallery: ["/images/projects/city-cable1.webp", "/images/projects/city-cable2.webp", "/images/projects/city-cable3.webp"],
     liveUrl: "#",
   },
   {
-    slug: "tabprint",
-    title: "TabPrint",
+    slug: "taoprint",
+    title: "TaoPrint",
     category: "Mobile App",
     shortDescription: "Custom printing platform for business cards, brochures, and personalized gifts.",
     description:
-      "The TabPrint App is a comprehensive platform designed for businesses and individuals to create, customize, and order high-quality printed materials. Whether it's business cards, brochures, banners, or personalized gifts, the app simplifies the design-to-delivery process with an intuitive interface, a vast library of templates, and seamless order tracking.",
-    image: "/images/p14.jpg",
-    heroImage: "/images/p14-hero.jpg",
+      "The TaoPrint App is a comprehensive platform designed for businesses and individuals to create, customize, and order high-quality printed materials. Whether it's business cards, brochures, banners, or personalized gifts, the app simplifies the design-to-delivery process with an intuitive interface, a vast library of templates, and seamless order tracking.",
+    image: "/images/projects/tao-print1.webp",
+    heroImage: "/images/projects/tao-print1.webp",
     features: [
       "Wide range of print products with material options",
       "Customizable templates and design editor",
@@ -321,19 +321,19 @@ export const projects: Project[] = [
       "Bulk ordering and loyalty points",
     ],
     technologies: ["React Native", "Node.js", "MongoDB", "AR Kit / AR Core", "Stripe"],
-    gallery: ["/images/p14-g1.jpg", "/images/p14-g2.jpg"],
+    gallery: ["/images/projects/tao-print1.webp", "/images/projects/tao-print2.webp", "/images/projects/tao-print3.webp"],
     appStoreUrl: "#",
     playStoreUrl: "#",
   },
   {
-    slug: "grazz-web",
-    title: "Grazz Web",
+    slug: "grazr-web",
+    title: "Grazr Web",
     category: "Web App",
     shortDescription: "React-based platform for seamless meat purchasing.",
     description:
-      "The Grazz Web App is a React-based platform designed for seamless meat purchasing. It offers a dynamic user interface with responsive design, state management for optimized performance, and a smooth shopping experience. React's component-based architecture makes it modular, scalable, and easy to maintain.",
-    image: "/images/p15.jpg",
-    heroImage: "/images/p15-hero.jpg",
+      "The Grazr Web App is a React-based platform designed for seamless meat purchasing. It offers a dynamic user interface with responsive design, state management for optimized performance, and a smooth shopping experience. React's component-based architecture makes it modular, scalable, and easy to maintain.",
+    image: "/images/projects/grazr-web1.webp",
+    heroImage: "/images/projects/grazr-web1.webp",
     features: [
       "Dynamic navigation with reusable card components",
       "Filtering and sorting with controlled components",
@@ -345,7 +345,7 @@ export const projects: Project[] = [
       "Recipe gallery and business account support",
     ],
     technologies: ["React", "Redux", "Node.js", "Express", "MongoDB", "Stripe"],
-    gallery: ["/images/p15-g1.jpg", "/images/p15-g2.jpg"],
+    gallery: ["/images/projects/grazr-web2.webp", "/images/projects/grazr-web2.webp", "/images/projects/grazr-web3.webp"],
     liveUrl: "#",
   },
   {
@@ -355,8 +355,8 @@ export const projects: Project[] = [
     shortDescription: "Comprehensive ERP system to streamline business operations across industries.",
     description:
       "FireERP is a comprehensive Enterprise Resource Planning (ERP) system tailored to streamline business operations across industries. Designed with scalability and flexibility in mind, FireERP integrates critical business functions such as inventory management, human resources, finance, sales, and customer relationship management into a single cohesive platform.",
-    image: "/images/p16.jpg",
-    heroImage: "/images/p16-hero.jpg",
+    image: "/images/projects/fire-erp-web1.webp",
+    heroImage: "/images/projects/fire-erp-web1.webp",
     features: [
       "Real-time dashboard with KPIs and visualizations",
       "Inventory management with low-stock alerts",
@@ -368,7 +368,7 @@ export const projects: Project[] = [
       "Advanced reporting and role-based access control",
     ],
     technologies: ["Angular/React", "Node.js/Java Spring Boot", "PostgreSQL", "MongoDB", "AWS/Azure"],
-    gallery: ["/images/p16-g1.jpg", "/images/p16-g2.jpg"],
+    gallery: ["/images/projects/fire-erp-web1.webp", "/images/projects/fire-erp-web2.webp", "/images/projects/fire-erp-web3.webp"],
     liveUrl: "#",
   },
   {
@@ -378,8 +378,8 @@ export const projects: Project[] = [
     shortDescription: "Visually captivating e-commerce grocery website with dynamic animations.",
     description:
       "The Briclay Website is a visually captivating and highly functional e-commerce platform for grocery shopping. Designed with HTML, CSS, and JavaScript, and enhanced with After Effects for dynamic animations, it provides an engaging user experience. The website showcases a wide range of products, facilitates easy navigation, and integrates secure payment options to make online grocery shopping a seamless and enjoyable experience.",
-    image: "/images/p17.jpg",
-    heroImage: "/images/p17-hero.jpg",
+    image: "/images/projects/briclay1.webp",
+    heroImage: "/images/projects/briclay1.webp",
     features: [
       "Eye-catching banner animations with After Effects/Lottie",
       "Search bar with auto-suggestions",
@@ -392,7 +392,7 @@ export const projects: Project[] = [
       "SEO-friendly structure with lazy loading",
     ],
     technologies: ["HTML5", "CSS3", "JavaScript", "After Effects", "Lottie"],
-    gallery: ["/images/p17-g1.jpg", "/images/p17-g2.jpg"],
+    gallery: ["/images/projects/briclay1.webp", "/images/projects/briclay2.webp", "/images/projects/briclay3.webp"],
     liveUrl: "#",
   },
 
@@ -405,8 +405,8 @@ export const projects: Project[] = [
     shortDescription: "Artisan cheese e-commerce website with rich storytelling and recipe integration.",
     description:
       "Simply Cheese is a visually rich e-commerce website dedicated to artisan cheese lovers. It offers a seamless shopping experience with detailed product descriptions, flavor notes, pairing suggestions, and a curated recipe section. The site combines storytelling about the cheese-making process with an intuitive interface for browsing, selecting, and purchasing premium cheeses.",
-    image: "/images/p18.jpg",
-    heroImage: "/images/p18-hero.jpg",
+    image: "/images/projects/simply-cheese1.webp",
+    heroImage: "/images/projects/simply-cheese1.webp",
     features: [
       "Hero section with high-quality imagery and promotions",
       "Story-driven About page with artisan process videos",
@@ -418,7 +418,7 @@ export const projects: Project[] = [
       "Mobile-first responsive design with touch-friendly navigation",
     ],
     technologies: ["Next.js", "Tailwind CSS", "Shopify/Headless CMS", "Vercel", "Framer Motion"],
-    gallery: ["/images/p18-g1.jpg", "/images/p18-g2.jpg", "/images/p18-g3.jpg"],
+    gallery: ["/images/projects/simply-cheese1.webp", "/images/projects/simply-cheese2.webp", "/images/projects/simply-cheese3.webp"],
     liveUrl: "#",
   },
   {
@@ -428,8 +428,8 @@ export const projects: Project[] = [
     shortDescription: "Kindergarten booking platform with playful design and seamless scheduling.",
     description:
       "The Air Bubble Website is an intuitive and user-friendly platform designed specifically for booking kindergarten services. Developed using Framer, the website combines ease of navigation, engaging design, and functionality to help parents seamlessly book spots for their children in a trusted and safe environment. With a focus on child-friendly design and simplicity, the site allows users to explore available daycare options, schedule bookings, and learn more about the services.",
-    image: "/images/p19.jpg",
-    heroImage: "/images/p19-hero.jpg",
+    image: "/images/projects/air-bubble1.webp",
+    heroImage: "/images/projects/air-bubble1.webp",
     features: [
       "Vibrant, playful design with soft colors and animations",
       "Prominent CTAs for booking and inquiries",
@@ -441,7 +441,7 @@ export const projects: Project[] = [
       "Parenting tips and event updates blog",
     ],
     technologies: ["Framer", "React", "HTML5", "CSS3", "JavaScript", "Stripe"],
-    gallery: ["/images/p19-g1.jpg", "/images/p19-g2.jpg"],
+    gallery: ["/images/projects/air-bubble1.webp", "/images/projects/air-bubble2.webp", "/images/projects/air-bubble3.webp"],
     liveUrl: "#",
   },
 ]

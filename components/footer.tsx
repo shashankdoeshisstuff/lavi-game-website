@@ -43,17 +43,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand Column */}
           <div className="space-y-4">
-            <div className="mb-4">
-              <Link href="/" className="inline-block">
-                <Image
-                  src="/images/Asset_24xs.png"
-                  alt="Axenet logo"
-                  width={140}
-                  height={70}
-                  className="h-auto w-auto max-w-[140px] md:max-w-[160px] object-contain"
-                  priority
-                />
-              </Link>
+            <div className="relative w-[140px] md:w-[160px] h-[70px]">
+              <Image
+                src="/images/Asset_24xs.png"
+                alt="Axenet logo"
+                fill
+                sizes="(max-width: 768px) 140px, 160px"
+                className="object-contain"
+                priority
+              />
             </div>
             <p className="text-sm text-gray-400 max-w-xs leading-relaxed">
               Creating immersive gaming experiences that push the boundaries of
