@@ -1,4 +1,5 @@
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, Mail, Phone, MapPin } from "lucide-react"
+import Link from "next/link"
 
 /**
  * ContactSection - Displays a contact form and a call-to-action
@@ -9,6 +10,7 @@ import { ArrowRight } from "lucide-react"
  * - Responsive typography: heading scales from 5xl to 9xl
  * - Form inputs with consistent styling and hover/focus states
  * - Secondary CTA button with arrow animation
+ * - Contact details bar at the bottom (email, phone, office)
  * 
  * Responsive breakpoints:
  * - Mobile (<640px): stacked layout, smaller heading, full-width form
@@ -20,6 +22,28 @@ import { ArrowRight } from "lucide-react"
  * be handled by a server action or external API.
  */
 export default function ContactSection() {
+  const contactInfo = [
+    {
+      icon: Mail,
+      title: "Email",
+      details: "contact@axenet.com",
+      href: "mailto:contact@axenet.com",
+    },
+    {
+      icon: Phone,
+      title: "Phone",
+      details: "+91 95656 83089",
+      href: "tel:+919565683089",
+    },
+    {
+      icon: MapPin,
+      title: "Office",
+      details:
+        "143/14, Kesar Bagh, LESA COLONY, Aminabad, Lucknow, Uttar Pradesh 226018",
+      href: "https://maps.app.goo.gl/rgChmANexxBiJp2y6",
+    },
+  ]
+
   return (
     <section className="relative w-full py-16 sm:py-20 md:py-28 overflow-hidden">
       
@@ -147,6 +171,42 @@ export default function ContactSection() {
             />
           </button>
         </div>
+
+        {/* CONTACT DETAILS BAR – added at the bottom */}
+        <div className="mt-12 pt-8 border-t border-white/10">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-8 md:gap-12">
+            {contactInfo.map((item, idx) => {
+              const Icon = item.icon
+              return (
+                <Link
+                  key={idx}
+                  href={item.href}
+                  target={item.icon === MapPin ? "_blank" : undefined}
+                  rel={item.icon === MapPin ? "noopener noreferrer" : undefined}
+                  className="
+                    group
+                    flex items-center gap-3
+                    transition-all duration-300
+                    hover:-translate-y-0.5
+                  "
+                >
+                  <div className="p-2 rounded-full bg-primary/10 text-primary transition-colors group-hover:bg-primary/20">
+                    <Icon className="w-4 h-4 sm:w-5 sm:h-5" strokeWidth={1.5} />
+                  </div>
+                  <div>
+                    <p className="text-white/50 text-[10px] sm:text-xs uppercase tracking-wider">
+                      {item.title}
+                    </p>
+                    <p className="text-white/80 text-xs sm:text-sm font-medium">
+                      {item.details}
+                    </p>
+                  </div>
+                </Link>
+              )
+            })}
+          </div>
+        </div>
+
       </div>
     </section>
   )

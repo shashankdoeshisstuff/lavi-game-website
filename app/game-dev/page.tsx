@@ -4,7 +4,7 @@ import ServicesSection from '@/components/sections/game-dev/service-section'
 import PlatformsSection from '@/components/sections/game-dev/platforms-section'
 import GameEnginesSection from '@/components/sections/game-dev/game-engines-section'
 import ProjectsSection from '@/components/sections/game-dev/projects-section'
-import ContactSection from '@/components/sections/game-dev/contact-section'
+import ContactSection from '@/components/contact-section'
 
 export default async function Home() {
 

@@ -67,6 +67,13 @@ export default function ReviewsSection() {
       image: "/images/testimonials/9.webp",
     },
     {
+      name: "Benjamin Davis",
+      company: "Bennett's Bakery",
+      address: "",
+      text: "Bright Horizon Marketing has been an invaluable partner for our bakery. Their team's expertise in SEO and online marketing has helped us stand out in a competitive market. From optimizing our website to managing our social media presence, their strategic approach has delivered impressive results. Thanks to their efforts, we've seen a significant increase in online orders and customer engagement. I couldn't be happier with the results, and I highly recommend Bright Horizon Marketing to anyone looking to grow their business online.",
+      image: "/images/testimonials/10.webp",
+    },
+    {
       name: "Christopher Anderson",
       company: "PATEL & CO. LAW FIRM",
       address: "",

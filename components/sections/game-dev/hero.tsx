@@ -1,5 +1,3 @@
-// components/sections/home/hero.tsx
-import { Button } from '@/components/ui/button'
 import { ArrowUpRight } from 'lucide-react'
 import Link from 'next/link'
 import Clients from './clients-section'
@@ -32,13 +30,27 @@ export default function Hero() {
               development.
             </p>
 
-            <Link href="contact" passHref>
-              <Button
-                size="lg"
-                className="bg-primary uppercase hover:bg-primary/90 rounded-none"
-              >
-                Contact Us <ArrowUpRight/>
-              </Button>
+            <Link href="/contact">
+              {/* Button */}
+              <button className="
+                mt-8
+                group
+                flex items-center gap-2
+                px-6 py-3
+                rounded-full
+                border border-white/20
+                uppercase
+                text-white
+                text-sm
+                transition-all duration-300
+                hover:bg-white hover:text-black
+              ">
+                Contact Us
+                <ArrowUpRight
+                  size={18}
+                  className="transition-transform duration-300 group-hover:translate-x-1"
+                />
+              </button>
             </Link>
           </div>
         </div>
