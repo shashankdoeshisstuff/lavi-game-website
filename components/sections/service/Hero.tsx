@@ -1,6 +1,9 @@
-import { Badge } from "@/components/ui/badge";
+type HeroProps = {
+  title: string;
+  description: string;
+};
 
-export function Hero() {
+export function Hero({ title, description }: HeroProps) {
   return (
     <div className="relative w-full mt-12 py-16 sm:py-20 md:py-28 overflow-hidden">
       {/* Background Watermark */}
@@ -21,28 +24,19 @@ export function Hero() {
           select-none
           overflow-x-auto
           max-w-[90vw]
+          uppercase
         "
         aria-hidden="true"
       >
-       SERVICES
+       {title}
       </h1>
 
       <div className="relative z-10 text-center mb-12 sm:mb-16 px-4">
-        <Badge
-          variant="secondary"
-          className="text-primary text-sm uppercase rounded-full mb-4"
-        >
-          Get In Touch
-        </Badge>
         <h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold">
-          Discover Our{" "}
-          <span className="relative inline-block px-3">
-            <span className="relative z-10 text-black">Services</span>
-            <span className="absolute inset-1 rotate-2 bg-primary"></span>
-          </span>
+          {title}
         </h2>
         <p className="text-white/60 mt-2 sm:mt-3 text-xs sm:text-sm md:text-base max-w-2xl mx-auto">
-          Reach out to discuss your project or just say hello. We're here to help.
+          {description}
         </p>
       </div>
     </div>

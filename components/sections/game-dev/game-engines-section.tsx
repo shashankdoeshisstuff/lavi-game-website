@@ -6,12 +6,14 @@ const engines = [
   {
     title: 'UNREAL ENGINE',
     image: '/images/unreal.webp',
+    url: 'https://www.unrealengine.com/',
     description:
       'For projects focused on visual depth and atmosphere, Unreal Engine delivers powerful rendering and physics systems. It enables realistic lighting, detailed environments, and immersive experiences such as VR and AR.',
   },
   {
     title: 'UNITY',
     image: '/images/unity.webp',
+    url: 'https://unity.com/',
     description:
       'Unity is ideal for flexible development and multi-platform deployment. It allows fast prototyping and efficient workflows for both mobile titles and large productions.',
   },
@@ -93,23 +95,26 @@ export default function GameEnginesSection() {
                 {engine.description}
               </p>
 
-              {/* Learn More Button (optional – can link to engine-specific page) */}
-              <Link href={`/services?engine=${engine.title.toLowerCase().replace(' ', '-')}`}>
-                <button className="
+              {/* Learn More Button – opens engine URL in a new tab */}
+              <Link
+                href={engine.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
                   group/btn
-                  flex items-center gap-1.5
+                  inline-flex items-center gap-1.5
                   text-primary
                   text-sm sm:text-base font-medium
                   transition-all duration-300
                   hover:gap-2
                   self-start
-                ">
-                  Learn More
-                  <ArrowUpRight
-                    size={16}
-                    className="transition-transform duration-300 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5"
-                  />
-                </button>
+                "
+              >
+                Learn More
+                <ArrowUpRight
+                  size={16}
+                  className="transition-transform duration-300 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5"
+                />
               </Link>
             </div>
           </div>
