@@ -10,6 +10,7 @@ export default function ServicesSection() {
         "We design and develop custom mobile application for Android and IOS platforms. Our mobile app developers have expertise to create mobile applications using Flutter, React, Native Android and IOS technologies.",
       icon: Smartphone,
       image: "/images/service1.png",
+      slug: 'mobile-app',
     },
     {
       title: "GAME DEVELOPMENT",
@@ -17,6 +18,7 @@ export default function ServicesSection() {
         "Our game developers using advance technology / tools and develop visually attractive UI and responsive games that keeps the gamers engaged. We help our clients to turn their creative ideas into games by providing cost-effective solutions with quality.",
       icon: Gamepad2,
       image: "/images/service2.png",
+      slug: 'pc-console-development',
     },
     {
       title: "WEB DEVELOPMENT",
@@ -24,6 +26,7 @@ export default function ServicesSection() {
         "We have rich and sharp proficiency and extensive experience in creating responsive and professional websites for all types of businesses. To stay with the latest web technology trends and concepts, we keep ourselves up to date with these trends and emerging technology concepts.",
       icon: Globe,
       image: "/images/service3.png",
+      slug: 'web',
     },
     {
       title: "AI DEVELOPMENT",
@@ -31,6 +34,7 @@ export default function ServicesSection() {
         "We offer comprehensive AI development solutions, including machine learning, deep learning, natural language processing, and generative AI, to create intelligent systems that enhance automation, decision-making, and user experiences.",
       icon: BrainCircuit,
       image: "/images/service4.png",
+      slug: 'ai',
     },
     {
       title: "GAME ART & DESIGN",
@@ -38,6 +42,7 @@ export default function ServicesSection() {
         "Our artists and designers craft engaging worlds and memorable visual styles. We focus on building unique environments, characters, and visual elements that bring game ideas to life.",
       icon: Gamepad2, // using gamepad as placeholder; you can change icon
       image: "/images/service5.png",
+      slug: 'game-art-design',
     },
     {
       title: "VR DEVELOPMENT",
@@ -45,6 +50,7 @@ export default function ServicesSection() {
         "We design immersive virtual reality experiences that feel natural and interactive. By combining lighting, depth, and motion, we create engaging VR worlds for players to explore.",
       icon: Globe,
       image: "/images/service6.png",
+      slug: 'vr-development',
     },
   ]
 
@@ -134,21 +140,23 @@ export default function ServicesSection() {
                 </p>
 
                 {/* Learn More Button (yellow accent) */}
-                <button className="
-                  group/btn
-                  flex items-center gap-1.5
-                  text-primary
-                  text-xs sm:text-sm font-medium
-                  transition-all duration-300
-                  hover:gap-2
-                  self-start
-                ">
-                  Learn More
-                  <ArrowUpRight
-                    size={14}
-                    className="transition-transform duration-300 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5"
-                  />
-                </button>
+                <Link href={`/services/${service.slug}`}>
+                  <button className="
+                    group/btn
+                    flex items-center gap-1.5
+                    text-primary
+                    text-xs sm:text-sm font-medium
+                    transition-all duration-300
+                    hover:gap-2
+                    self-start
+                  ">
+                    Learn More
+                    <ArrowUpRight
+                      size={14}
+                      className="transition-transform duration-300 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5"
+                    />
+                  </button>
+                </Link>
               </div>
             </div>
           )

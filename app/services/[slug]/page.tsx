@@ -9,7 +9,6 @@ import { notFound } from "next/navigation";
 import Features from "@/components/sections/services/features";
 import WhySection from "@/components/sections/services/WhySection";
 
-
 const stepsData: Step[] = [
   {
     title: "Discovery Phase",

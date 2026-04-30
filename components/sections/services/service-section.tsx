@@ -2,7 +2,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, ArrowUpRight } from "lucide-react"
 import Link from "next/link"
-import { services } from "@/lib/services" // adjust path as needed
+import { services } from "@/lib/services-backup" // adjust path as needed
 
 export default function ServicesSection() {
   return (

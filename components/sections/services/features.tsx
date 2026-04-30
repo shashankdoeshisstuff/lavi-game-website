@@ -1,5 +1,5 @@
 import { Badge } from '@/components/ui/badge';
-import { FeaturesItem } from '@/lib/services';
+import { FeaturesItem } from '@/lib/services-backup';
 import {
   Smartphone,
   PenTool,

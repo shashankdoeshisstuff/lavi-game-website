@@ -1,6 +1,6 @@
 "use client";
 
-import { AccordionItem } from "@/lib/services";
+import { AccordionItem } from "@/lib/services-backup";
 import { useState } from "react";
 
 interface AccordionProps {
