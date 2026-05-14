@@ -1,9 +1,50 @@
+import { Badge } from "@/components/ui/badge";
+
 export function Hero() {
   return (
-    <div className="text-center py-24">
-      <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold">
-        Hey There! Welcome to <span className="text-yellow-400">Axenet!</span>
+    <div className="relative w-full mt-12 py-16 sm:py-20 md:py-28 overflow-hidden">
+      {/* Background Watermark */}
+      <h1
+        className="
+          absolute 
+          top-10 
+          left-1/2 
+          -translate-x-1/2 
+          text-[40px] 
+          xs:text-[60px]
+          sm:text-[120px] 
+          md:text-[180px] 
+          font-bold 
+          text-white/5 
+          whitespace-nowrap 
+          pointer-events-none 
+          select-none
+          overflow-x-auto
+          max-w-[90vw]
+        "
+        aria-hidden="true"
+      >
+        ABOUT US
       </h1>
+
+      <div className="relative z-10 text-center mb-12 sm:mb-16 px-4">
+        <Badge
+          variant="secondary"
+          className="text-primary text-sm uppercase rounded-full mb-4"
+        >
+          Our Story
+        </Badge>
+        <h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold">
+          Crafting Digital{" "}
+          <span className="relative inline-block px-3">
+            <span className="relative z-10 text-black">Excellence</span>
+            <span className="absolute inset-1 rotate-2 bg-primary"></span>
+          </span>
+        </h2>
+        <p className="text-white/60 mt-2 sm:mt-3 text-xs sm:text-sm md:text-base max-w-2xl mx-auto">
+          We are a team of innovators, designers, and engineers dedicated to building transformative digital experiences.
+        </p>
+      </div>
     </div>
   );
 }

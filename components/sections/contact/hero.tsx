@@ -24,7 +24,7 @@ export function Hero() {
         "
         aria-hidden="true"
       >
-        PORTFOLIO
+        CONTACT
       </h1>
 
       <div className="relative z-10 text-center mb-12 sm:mb-16 px-4">
@@ -32,17 +32,17 @@ export function Hero() {
           variant="secondary"
           className="text-primary text-sm uppercase rounded-full mb-4"
         >
-          Our Work
+          Get In Touch
         </Badge>
         <h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold">
-          Explore Our{" "}
+          Let's{" "}
           <span className="relative inline-block px-3">
-            <span className="relative z-10 text-black">Projects</span>
+            <span className="relative z-10 text-black">Connect</span>
             <span className="absolute inset-1 rotate-2 bg-primary"></span>
           </span>
         </h2>
         <p className="text-white/60 mt-2 sm:mt-3 text-xs sm:text-sm md:text-base max-w-2xl mx-auto">
-          A showcase of our finest work – from mobile apps and web platforms to immersive games and AI solutions.
+          Have a project in mind or just want to say hello? We'd love to hear from you.
         </p>
       </div>
     </div>

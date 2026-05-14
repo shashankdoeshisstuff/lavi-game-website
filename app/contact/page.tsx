@@ -1,3 +1,4 @@
+import { Hero } from "@/components/sections/contact/hero"
 import { Badge } from "@/components/ui/badge"
 import {
   Phone,
@@ -49,54 +50,9 @@ export default function ContactSection() {
   ]
 
   return (
-    <section className="w-full mx-auto px-4 sm:px-6 lg:px-12 py-20 sm:py-24">
-      <div className="container mx-auto max-w-7xl">
-        {/* ================= HEADER WITH BACKGROUND WATERMARK ================= */}
-        <div className="relative w-full mt-12 py-16 sm:py-20 md:py-28 overflow-hidden">
-          {/* Background Watermark */}
-          <h1
-            className="
-              absolute 
-              top-10 
-              left-1/2 
-              -translate-x-1/2 
-              text-[40px] 
-              xs:text-[60px]
-              sm:text-[120px] 
-              md:text-[180px] 
-              font-bold 
-              text-white/5 
-              whitespace-nowrap 
-              pointer-events-none 
-              select-none
-              overflow-x-auto
-              max-w-[90vw]
-            "
-            aria-hidden="true"
-          >
-            CONTACT US
-          </h1>
-
-          {/* Header Content */}
-          <div className="relative z-10 text-center mb-12 sm:mb-16 px-4">
-            <Badge
-              variant="secondary"
-              className="text-primary text-sm uppercase rounded-full mb-4"
-            >
-              Get In Touch
-            </Badge>
-            <h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold">
-              Let's{" "}
-              <span className="relative inline-block px-3">
-                <span className="relative z-10 text-black">Connect</span>
-                <span className="absolute inset-1 rotate-2 bg-primary"></span>
-              </span>
-            </h2>
-            <p className="text-white/60 mt-2 sm:mt-3 text-xs sm:text-sm md:text-base max-w-2xl mx-auto">
-              Reach out to discuss your project or just say hello. We're here to help.
-            </p>
-          </div>
-        </div>
+    <section className="w-full mx-auto">
+      <Hero/>
+      <div className="container mx-auto max-w-7xl pb-12">
 
         {/* ================= CONTACT CARDS GRID ================= */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

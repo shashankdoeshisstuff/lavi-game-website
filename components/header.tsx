@@ -6,12 +6,12 @@ import { MobileMenu } from "./mobile-menu";
 
 const navigationItems = [
   { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Services", href: "/services" },
   { name: "Game", href: "/game" },
+  { name: "Services", href: "/services" },
   { name: "Projects", href: "/projects" },
-  { name: "Games", href: "/game/games" },
+  { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
+  /* { name: "Games", href: "/game/games" }, */
 ];
 
 /**
