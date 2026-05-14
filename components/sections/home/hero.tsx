@@ -59,12 +59,12 @@ export default function Hero() {
                 {/* Company Logo with responsive sizing and slight tilt */}
                 {/* Mobile: 48x48px -> Small tablet: 56x56px -> Desktop: 64x64px */}
                 <Image
-                  src="/images/logo.png"
+                  src="/images/axnet.webp" 
                   alt="Axenet logo - company brand mark"
                   width={64}
                   height={64}
                   className="object-contain -rotate-12 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16"
-                  priority // Load immediately as it's above the fold
+                  priority
                 />
 
                 {/* Plain text "Firm" without highlight */}
