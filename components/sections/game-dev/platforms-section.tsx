@@ -36,7 +36,7 @@ export default function PlatformsSection() {
   ]
 
   return (
-    <section className="relative w-full py-16 sm:py-24 overflow-hidden">
+    <section id="platforms" className="relative w-full py-16 sm:py-24 overflow-hidden">
       {/* Background watermark */}
       <h1
         className="

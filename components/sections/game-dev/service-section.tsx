@@ -5,6 +5,14 @@ import Link from "next/link"
 export default function ServicesSection() {
   const services = [
     {
+      title: "AI DEVELOPMENT",
+      description:
+        "We offer comprehensive AI development solutions, including machine learning, deep learning, natural language processing, and generative AI, to create intelligent systems that enhance automation, decision-making, and user experiences.",
+      icon: BrainCircuit,
+      image: "/images/service4.png",
+      slug: 'ai',
+    },
+    {
       title: "MOBILE APP DEVELOPMENT",
       description:
         "We design and develop custom mobile application for Android and IOS platforms. Our mobile app developers have expertise to create mobile applications using Flutter, React, Native Android and IOS technologies.",
@@ -27,14 +35,6 @@ export default function ServicesSection() {
       icon: Globe,
       image: "/images/service3.png",
       slug: 'web',
-    },
-    {
-      title: "AI DEVELOPMENT",
-      description:
-        "We offer comprehensive AI development solutions, including machine learning, deep learning, natural language processing, and generative AI, to create intelligent systems that enhance automation, decision-making, and user experiences.",
-      icon: BrainCircuit,
-      image: "/images/service4.png",
-      slug: 'ai',
     },
     {
       title: "GAME ART & DESIGN",

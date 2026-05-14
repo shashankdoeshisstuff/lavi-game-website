@@ -53,6 +53,36 @@ export interface Service {
 
 export const services: Service[] = [
   {
+    slug: 'ai',
+    title: 'AI DEVELOPMENT',
+    description:
+      'We offer advanced AI development solutions, leveraging machine learning, deep learning, and natural language processing to build intelligent systems that enhance decision-making, automation, and user experiences across various industries.',
+    ctaText: 'LEARN MORE',
+    icon: BrainCircuit,
+    why_description:
+      'In today’s rapidly evolving digital landscape, integrating artificial intelligence into your business operations can provide a significant competitive advantage. Whether you’re looking to automate processes, enhance customer experiences, or derive insights from data, AI offers powerful solutions that streamline operations and improve decision-making. By adopting AI technologies, you can unlock new possibilities, boost efficiency, and drive innovation. Our AI development service ensures that you stay ahead of the curve by delivering customized, intelligent systems tailored to your unique needs, helping you harness the full potential of AI to grow your business and achieve your objectives.',
+    accordion_item: [
+      { title: 'Enhanced Decision-Making', content: 'Data‑driven insights that help you make smarter business choices.' },
+      { title: 'Automation of Repetitive Tasks', content: 'Free up your team by automating manual, time‑consuming processes.' },
+      { title: 'Personalized User Experiences', content: 'Tailor content, recommendations, and interactions to each user.' },
+      { title: 'Improved Efficiency and Productivity', content: 'Streamline workflows and reduce operational overhead.' },
+      { title: 'Cost Reduction', content: 'Lower long‑term costs through intelligent automation and optimization.' },
+      { title: 'Scalable Solutions', content: 'AI models that grow with your data volume and business complexity.' },
+      { title: 'Predictive Analytics', content: 'Anticipate market trends, customer behavior, and potential risks.' },
+      { title: 'Advanced Problem Solving', content: 'Tackle complex challenges that traditional software cannot address.' },
+    ],
+    features: [
+      { title: 'AI Strategy and Consultation', icon: BrainCircuit, description: 'We begin by understanding your business objectives and identifying opportunities where AI can create value, guiding you through the implementation of AI solutions.' },
+      { title: 'Machine Learning and Deep Learning Models', icon: Cpu, description: 'We develop and train custom machine learning and deep learning models tailored to your business needs, enabling data-driven decision-making and predictive analytics.' },
+      { title: 'Generative AI Solutions', icon: Sparkles, description: 'Implementing generative AI models that can create new content, such as text, images, videos, and more, to enhance creativity and drive innovation within your business.' },
+      { title: 'Automation and Process Optimization', icon: Zap, description: 'Implementing AI-driven automation solutions to streamline workflows, reduce errors, and increase productivity.' },
+      { title: 'Predictive Analytics and Insights', icon: TrendingUp, description: 'Building AI models that analyze historical data and predict future trends, enabling proactive decision-making and smarter business strategies.' },
+      { title: 'Custom AI Application Development', icon: Code, description: 'Developing AI-powered applications that are scalable, secure, and optimized to meet your specific business requirements and objectives.' },
+      { title: 'AI Integration and Deployment', icon: Settings, description: 'Integrating AI solutions into your existing systems and ensuring seamless deployment, allowing you to leverage AI effectively within your organization.' },
+      { title: 'Ongoing AI Model Maintenance', icon: RefreshCw, description: 'Providing continuous model optimization, updates, and monitoring to ensure your AI systems evolve with changing data and business needs.' },
+    ],
+  },
+  {
     slug: 'mobile-app',
     title: 'MOBILE APP DEVELOPMENT',
     description:
@@ -142,37 +172,6 @@ export const services: Service[] = [
       { title: 'Ongoing Maintenance & Updates', icon: RefreshCw, description: 'Providing continuous support, bug fixes, and game updates to keep your game fresh and running smoothly.' },
     ],
   },
-  {
-    slug: 'ai',
-    title: 'AI DEVELOPMENT',
-    description:
-      'We offer advanced AI development solutions, leveraging machine learning, deep learning, and natural language processing to build intelligent systems that enhance decision-making, automation, and user experiences across various industries.',
-    ctaText: 'LEARN MORE',
-    icon: BrainCircuit,
-    why_description:
-      'In today’s rapidly evolving digital landscape, integrating artificial intelligence into your business operations can provide a significant competitive advantage. Whether you’re looking to automate processes, enhance customer experiences, or derive insights from data, AI offers powerful solutions that streamline operations and improve decision-making. By adopting AI technologies, you can unlock new possibilities, boost efficiency, and drive innovation. Our AI development service ensures that you stay ahead of the curve by delivering customized, intelligent systems tailored to your unique needs, helping you harness the full potential of AI to grow your business and achieve your objectives.',
-    accordion_item: [
-      { title: 'Enhanced Decision-Making', content: 'Data‑driven insights that help you make smarter business choices.' },
-      { title: 'Automation of Repetitive Tasks', content: 'Free up your team by automating manual, time‑consuming processes.' },
-      { title: 'Personalized User Experiences', content: 'Tailor content, recommendations, and interactions to each user.' },
-      { title: 'Improved Efficiency and Productivity', content: 'Streamline workflows and reduce operational overhead.' },
-      { title: 'Cost Reduction', content: 'Lower long‑term costs through intelligent automation and optimization.' },
-      { title: 'Scalable Solutions', content: 'AI models that grow with your data volume and business complexity.' },
-      { title: 'Predictive Analytics', content: 'Anticipate market trends, customer behavior, and potential risks.' },
-      { title: 'Advanced Problem Solving', content: 'Tackle complex challenges that traditional software cannot address.' },
-    ],
-    features: [
-      { title: 'AI Strategy and Consultation', icon: BrainCircuit, description: 'We begin by understanding your business objectives and identifying opportunities where AI can create value, guiding you through the implementation of AI solutions.' },
-      { title: 'Machine Learning and Deep Learning Models', icon: Cpu, description: 'We develop and train custom machine learning and deep learning models tailored to your business needs, enabling data-driven decision-making and predictive analytics.' },
-      { title: 'Generative AI Solutions', icon: Sparkles, description: 'Implementing generative AI models that can create new content, such as text, images, videos, and more, to enhance creativity and drive innovation within your business.' },
-      { title: 'Automation and Process Optimization', icon: Zap, description: 'Implementing AI-driven automation solutions to streamline workflows, reduce errors, and increase productivity.' },
-      { title: 'Predictive Analytics and Insights', icon: TrendingUp, description: 'Building AI models that analyze historical data and predict future trends, enabling proactive decision-making and smarter business strategies.' },
-      { title: 'Custom AI Application Development', icon: Code, description: 'Developing AI-powered applications that are scalable, secure, and optimized to meet your specific business requirements and objectives.' },
-      { title: 'AI Integration and Deployment', icon: Settings, description: 'Integrating AI solutions into your existing systems and ensuring seamless deployment, allowing you to leverage AI effectively within your organization.' },
-      { title: 'Ongoing AI Model Maintenance', icon: RefreshCw, description: 'Providing continuous model optimization, updates, and monitoring to ensure your AI systems evolve with changing data and business needs.' },
-    ],
-  },
-
   /* Additional for game development */
   {
     slug: 'vr-development',

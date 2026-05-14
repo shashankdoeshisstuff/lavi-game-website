@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import { useState, useRef, useEffect, useCallback } from 'react';
 
 const projects = [
@@ -12,7 +12,7 @@ const projects = [
       'A futuristic open-world RPG set in a cyberpunk metropolis where your choices shape the destiny of the city.',
     ],
     image: '/images/service4.png',
-    href: '/games/cyber-revolution',
+    href: '/game/games/cyber-revolution',
   },
   {
     title: 'Ancient Realms',
@@ -20,7 +20,7 @@ const projects = [
       'Epic fantasy adventure exploring mystical lands filled with magic, legendary creatures, and ancient secrets.',
     ],
     image: '/images/service5.png',
-    href: '/games/ancient-realms',
+    href: '/game/games/ancient-realms',
   },
   {
     title: 'Neo Racing X',
@@ -28,7 +28,7 @@ const projects = [
       'Future racing with hyper-realistic physics, dynamic weather, and fully customizable vehicles.',
     ],
     image: '/images/service1.png',
-    href: '/games/neo-racing',
+    href: '/game/games/neo-racing',
   },
 ];
 
@@ -124,7 +124,7 @@ export default function ProjectsSection() {
   }, [activeIndex, scrollToCard]);
 
   return (
-    <section className="relative w-full py-16 sm:py-20 md:py-28 overflow-hidden">
+    <section id="featured" className="relative w-full py-16 sm:py-20 md:py-28 overflow-hidden">
       {/* Background watermark */}
       <h1
         className="
@@ -293,6 +293,36 @@ export default function ProjectsSection() {
             ))}
           </div>
         </div>
+      </div>
+
+      {/* ================= CTA BUTTON ================= */}
+      <div className="relative z-10 flex justify-center mt-10 sm:mt-12 md:mt-14">
+        <Link href="/game/games">
+          <button 
+            className="
+              group
+              flex items-center gap-2
+              px-5 py-2.5
+              sm:px-6 sm:py-3
+              rounded-full
+              border border-white/20
+              uppercase
+              text-white
+              text-xs
+              sm:text-sm
+              font-medium
+              transition-all duration-300
+              hover:bg-white hover:text-black
+              hover:border-white
+            "
+          >
+            View All Games
+            <ArrowRight
+              size={16}
+              className="transition-transform duration-300 group-hover:translate-x-1 sm:w-[18px] sm:h-[18px]"
+            />
+          </button>
+        </Link>
       </div>
     </section>
   );

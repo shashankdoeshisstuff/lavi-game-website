@@ -1,8 +1,8 @@
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, ArrowUpRight } from "lucide-react"
+import { ArrowUpRight } from "lucide-react"
 import Link from "next/link"
-import { services } from "@/lib/services-backup" // adjust path as needed
+import { services } from "@/lib/services"
 
 export default function ServicesSection() {
   return (
@@ -21,7 +21,7 @@ export default function ServicesSection() {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {services.map((service, index) => {
             const Icon = service.icon
             return (

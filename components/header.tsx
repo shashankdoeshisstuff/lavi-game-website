@@ -8,9 +8,9 @@ const navigationItems = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Services", href: "/services" },
-  { name: "Game Dev", href: "/game-dev" },
+  { name: "Game", href: "/game" },
   { name: "Projects", href: "/projects" },
-  { name: "Games", href: "/games" },
+  { name: "Games", href: "/game/games" },
   { name: "Contact", href: "/contact" },
 ];
 

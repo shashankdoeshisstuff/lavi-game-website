@@ -8,41 +8,40 @@ export default function Footer() {
   const companyLinks = [
     { name: 'About Us', href: '/about' },
     { name: 'Careers', href: '/careers' },
-    /* { name: 'News & Press', href: '/news' }, */
     { name: 'Contact', href: '/contact' },
-    /* { name: 'Leadership', href: '/leadership' }, */
   ];
 
   const gamesLinks = [
-    { name: 'All Games', href: '/games' },
-    /* { name: 'Upcoming Releases', href: '/games/upcoming' }, */
-    { name: 'Featured Titles', href: '/games/featured' },
-    /* { name: 'Game Store', href: '/store' }, */
-    { name: 'Platforms', href: '/platforms' },
+    { name: 'Game', href: '/game' },
+    { name: 'All Games', href: '/game/games' },
+    { name: 'Featured Titles', href: '/game#featured' },
+    { name: 'Platforms', href: 'game#platforms' },
+  ];
+
+  const servicesLinks = [
+    { name: 'AI Developement', href: '/services/ai' },
+    { name: 'VR Developement', href: '/services/vr-developement' },
+    { name: 'Game Developement', href: '/services/game' },
+    { name: 'Mobile App Developement', href: '/services/mobile-app' },
   ];
 
   const supportLinks = [
     { name: 'Help Center', href: '/help' },
-    /* { name: 'Community', href: '/community' },
-    { name: 'FAQ', href: '/faq' },
-    { name: 'Developer Portal', href: '/developers' },
-    { name: 'Partnerships', href: '/partners' }, */
   ];
 
   const legalLinks = [
     { name: 'Terms of Service', href: '/terms' },
     { name: 'Privacy Policy', href: '/privacy' },
     { name: 'Cookie Policy', href: '/cookies' },
-    /* { name: 'Sitemap', href: '/sitemap' }, */
   ];
 
   return (
     <footer className="w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-12 md:py-16 border border-white/10 rounded-4xl bg-black/20 mb-12">
-        {/* Top Grid */}
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
-          {/* Brand Column */}
-          <div className="space-y-4">
+        {/* Responsive top grid: 1 column on mobile, 3 columns on md+ (brand: 1/3, links: 2/3) */}
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
+          {/* Brand Column – spans 1 of the 3 md columns */}
+          <div className="space-y-4 md:col-span-1">
             <div className="relative w-[140px] md:w-[160px] h-[70px]">
               <Image
                 src="/images/Asset_24xs.png"
@@ -53,20 +52,22 @@ export default function Footer() {
                 priority
               />
             </div>
-            <p className="text-sm text-gray-400 max-w-xs leading-relaxed">
+            <p className="text-sm text-gray-400 max-w-xs leading-relaxed break-words">
               Creating immersive gaming experiences that push the boundaries of
               technology and storytelling. Building the future of interactive entertainment.
             </p>
 
-            {/* Contact Info */}
-            <div className="space-y-2 text-sm">
-              <div className="flex items-center gap-2 text-gray-400">
-                <MapPin className="h-4 w-4" />
-                <span>143/14, Kesar Bagh, LESA COLONY, Aminabad, Lucknow, Uttar Pradesh 226018</span>
+            {/* Contact Info – ensures long address wraps without overflowing */}
+            <div className="space-y-2 text-sm max-w-full">
+              <div className="flex items-start gap-2 text-gray-400">
+                <MapPin className="h-4 w-4 mt-0.5 shrink-0" />
+                <span className="break-words">
+                  143/14, Kesar Bagh, LESA COLONY, Aminabad, Lucknow, Uttar Pradesh 226018
+                </span>
               </div>
               <div className="flex items-center gap-2 text-gray-400">
-                <Mail className="h-4 w-4" />
-                <span>contact@axenet.com</span>
+                <Mail className="h-4 w-4 shrink-0" />
+                <span className="break-all">contact@axenet.com</span>
               </div>
             </div>
 
@@ -103,58 +104,79 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Company Links */}
-          <div className="space-y-3">
-            <h3 className="font-bold text-white uppercase tracking-wide text-sm">
-              Company
-            </h3>
-            <nav className="flex flex-col space-y-2 text-sm">
-              {companyLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-gray-400 hover:text-white transition-colors py-1"
-                >
-                  {link.name}
-                </Link>
-              ))}
-            </nav>
-          </div>
+          {/* Links Container – spans 2 of the 3 md columns */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 md:col-span-2">
+            {/* Company Links */}
+            <div className="space-y-3">
+              <h3 className="font-bold text-white uppercase tracking-wide text-sm">
+                Company
+              </h3>
+              <nav className="flex flex-col space-y-2 text-sm">
+                {companyLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="text-gray-400 hover:text-white transition-colors py-1"
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+              </nav>
+            </div>
 
-          {/* Games Links */}
-          <div className="space-y-3">
-            <h3 className="font-bold text-white uppercase tracking-wide text-sm">
-              Games
-            </h3>
-            <nav className="flex flex-col space-y-2 text-sm">
-              {gamesLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-gray-400 hover:text-white transition-colors py-1"
-                >
-                  {link.name}
-                </Link>
-              ))}
-            </nav>
-          </div>
+            {/* Games Links */}
+            <div className="space-y-3">
+              <h3 className="font-bold text-white uppercase tracking-wide text-sm">
+                Games
+              </h3>
+              <nav className="flex flex-col space-y-2 text-sm">
+                {gamesLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="text-gray-400 hover:text-white transition-colors py-1"
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+              </nav>
+            </div>
 
-          {/* Support Links */}
-          <div className="space-y-3">
-            <h3 className="font-bold text-white uppercase tracking-wide text-sm">
-              Support
-            </h3>
-            <nav className="flex flex-col space-y-2 text-sm">
-              {supportLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-gray-400 hover:text-white transition-colors py-1"
-                >
-                  {link.name}
-                </Link>
-              ))}
-            </nav>
+            {/* Services Links */}
+            <div className="space-y-3">
+              <h3 className="font-bold text-white uppercase tracking-wide text-sm">
+                Services
+              </h3>
+              <nav className="flex flex-col space-y-2 text-sm">
+                {servicesLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="text-gray-400 hover:text-white transition-colors py-1"
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+              </nav>
+            </div>
+
+            {/* Support Links */}
+            <div className="space-y-3">
+              <h3 className="font-bold text-white uppercase tracking-wide text-sm">
+                Support
+              </h3>
+              <nav className="flex flex-col space-y-2 text-sm">
+                {supportLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="text-gray-400 hover:text-white transition-colors py-1"
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+              </nav>
+            </div>
           </div>
         </div>
 

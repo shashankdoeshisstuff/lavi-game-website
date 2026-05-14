@@ -6,16 +6,16 @@ import { Rocket, Network, User, Atom } from "lucide-react"
  * StatsShowcaseSection - Displays company stats, features, and highlights
  * 
  * Changes made:
- * - Removed all glow/shadows from stats circles (clean glass look)
- * - Enhanced logo with stronger glow effect (replaced stats circle glow)
- * - Maintained 2‑column grid for stats on mobile, overlapping row on tablet+
- * - All other design elements unchanged
+ * - Reduced circle sizes slightly (mobile: w-24, sm: w-28, md: w-36)
+ * - Increased value font sizes for better readability
+ * - Increased label font sizes (text-xs on mobile, text-sm on md+)
+ * - Adjusted negative margins to keep the overlapping effect balanced
+ * - Improved responsive behaviour: refined breakpoints & text scaling
  * 
  * Note: This is a server component (no client-side JavaScript required).
  * All hover effects and transitions are CSS-based.
  */
 export default function StatsShowcaseSection() {
-
   // ================= DATA =================
   const stats = [
     { value: "10+", label: "Years of Experience" },
@@ -51,34 +51,35 @@ export default function StatsShowcaseSection() {
 
   return (
     <section className="relative w-full py-16 sm:py-20 md:py-28 px-4 sm:px-6 lg:px-12 overflow-hidden">
-      <div className="relative z-10 max-w-7xl mx-auto">  
+      <div className="relative z-10 max-w-7xl mx-auto">
+        {/* ================= STATS SECTION ================= */}
         <div className="mb-16 sm:mb-20 md:mb-24">
-          
-          {/* Mobile: 2‑column grid */}
+          {/* Mobile: 2‑column grid (small circles, bigger text) */}
           <div className="grid grid-cols-2 gap-5 sm:hidden place-items-center">
             {stats.map((stat, i) => (
               <div
                 key={i}
                 className="
-                  w-28 h-28
+                  w-24 h-24
                   rounded-full
                   bg-white/10
                   backdrop-blur-sm
                   flex flex-col items-center justify-center text-center
+                  relative
                 "
               >
                 <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/10 to-transparent" />
-                <p className="relative z-10 text-lg font-semibold text-white">
+                <p className="relative z-10 text-xl font-semibold text-white">
                   {stat.value}
                 </p>
-                <p className="relative z-10 text-[10px] text-gray-300 px-2 leading-tight">
+                <p className="relative z-10 text-xs text-gray-300 px-2 leading-tight">
                   {stat.label}
                 </p>
               </div>
             ))}
           </div>
 
-          {/* Tablet+ : overlapping row (original design, but without glow) */}
+          {/* Tablet+ : overlapping row (scaled-down circles, larger text) */}
           <div className="hidden sm:flex justify-center">
             <div className="flex items-center">
               {stats.map((stat, i) => (
@@ -87,21 +88,21 @@ export default function StatsShowcaseSection() {
                   className={`
                     relative
                     flex-shrink-0
-                    w-32 h-32
-                    md:w-40 md:h-40
+                    w-28 h-28
+                    md:w-36 md:h-36
                     rounded-full
                     bg-white/10
                     backdrop-blur-sm
                     flex flex-col items-center justify-center text-center
                     transition-all duration-300
-                    ${i !== 0 ? "-ml-6 md:-ml-12" : ""}
+                    ${i !== 0 ? "-ml-6 md:-ml-8" : ""}
                   `}
                 >
                   <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/10 to-transparent" />
-                  <p className="relative z-10 text-xl md:text-2xl font-semibold text-white">
+                  <p className="relative z-10 text-2xl sm:text-3xl md:text-3xl font-semibold text-white">
                     {stat.value}
                   </p>
-                  <p className="relative z-10 text-[10px] md:text-xs text-gray-300 px-2 leading-tight">
+                  <p className="relative z-10 text-xs md:text-sm text-gray-300 px-2 leading-tight">
                     {stat.label}
                   </p>
                 </div>
@@ -120,10 +121,17 @@ export default function StatsShowcaseSection() {
             
             {/* Logo image */}
             <Image
-              src="/images/logo.png"
+              src="/images/axnet.webp"
               alt="Company Logo"
-              width={120}
-              height={120}
+              width={512}
+              height={512}
+              quality={100}
+              sizes="
+                (max-width: 640px) 96px,
+                (max-width: 768px) 144px,
+                (max-width: 1024px) 176px,
+                208px
+              "
               className="relative -rotate-12 z-10 opacity-90 w-24 h-24 sm:w-36 sm:h-36 md:w-44 md:h-44 lg:w-52 lg:h-52 object-contain drop-shadow-lg"
               priority
             />

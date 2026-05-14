@@ -17,14 +17,13 @@ import Image from "next/image"
  * - Desktop (≥1024px): original spacious layout, logo width 120px, gap 8
  */
 export default function Clients() {
-  // Array of client logos - add/remove as needed
   const logos = [
-    { src: "/logos/unity.png", alt: "Unity" },
-    { src: "/logos/unreal.png", alt: "Unreal Engine" },
-    { src: "/logos/epic.png", alt: "Epic Games" },
-    { src: "/logos/ubisoft.png", alt: "Ubisoft" },
-    { src: "/logos/ea.png", alt: "Electronic Arts" },
-    { src: "/logos/riot.png", alt: "Riot Games" },
+    { src: "/images/brands/1.webp", alt: "brand-1" },
+    { src: "/images/brands/2.webp", alt: "brand-2" },
+    { src: "/images/brands/3.webp", alt: "brand-3" },
+    { src: "/images/brands/4.webp", alt: "brand-4" },
+    { src: "/images/brands/5.webp", alt: "brand-5" },
+    { src: "/images/brands/6.webp", alt: "brand-6" },
   ]
 
   return (
@@ -105,22 +104,24 @@ export default function Clients() {
                 animation: "infinite-scroll 20s linear infinite",
               }}
             >
-              {/* 
-                Double the logos array to create a seamless loop
-                When first set scrolls out, second set follows immediately
-              */}
               {[...logos, ...logos].map((logo, i) => (
                 <div
                   key={`${logo.alt}-${i}`}
-                  // Responsive minimum width for consistent logo container sizing
                   className="flex items-center justify-center min-w-[80px] sm:min-w-[100px] md:min-w-[120px]"
                 >
                   <Image
                     src={logo.src}
                     alt={logo.alt}
-                    // Responsive logo dimensions
-                    width={60}
-                    height={24}
+                    // Intrinsic dimensions set to 3x–4x the largest displayed size for
+                    // sharp rendering on high‑DPI screens (h-10 = 40px → height: 120)
+                    width={300}
+                    height={120}
+                    quality={100}
+                    sizes="
+                      (max-width: 640px) 60px,
+                      (max-width: 768px) 80px,
+                      100px
+                    "
                     className="object-contain opacity-70 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 w-auto h-6 sm:h-8 md:h-10"
                     loading="lazy"
                   />

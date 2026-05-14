@@ -2,6 +2,7 @@ import { ArrowUpRight } from 'lucide-react'
 import Link from 'next/link'
 import Clients from './clients-section'
 import BackgroundVideos from './background-videos'
+import StackShowcase from './stack-showcase'
 
 const videoUrls = [
   'https://youtu.be/j2lZM8Vip54',
@@ -57,9 +58,10 @@ export default function Hero() {
       </div>
 
       {/* Clients Section – can be server if it has no client deps */}
-      <div className="absolute bottom-0 left-0 z-20 w-full">
+      {/* <div className="absolute bottom-0 left-0 z-20 w-full">
         <Clients />
-      </div>
+        <StackShowcase />
+      </div> */}
     </section>
   )
 }
